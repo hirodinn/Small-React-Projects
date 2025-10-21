@@ -33,3 +33,9 @@
   font-size: 100px;
   color: white;
 }
+
+@media (max-width: 750px) {
+  .project-2 .color-container h1 {
+    font-size: 60px;
+  }
+}

@@ -32,6 +32,9 @@ export function Project1() {
       <div
         className={isMultipleAllowed ? "multiple active" : "multiple"}
         onClick={() => {
+          if (isMultipleAllowed) {
+            setAllowed([false, false, false, false]);
+          }
           setIsMultipleAllowed(!isMultipleAllowed);
         }}
       >

@@ -19,7 +19,6 @@ export function Box({
             } else {
               const temp = [...allowed];
               const allow = allowed[index];
-
               temp[index] = !allow;
               setAllowed(temp);
               console.log(temp);

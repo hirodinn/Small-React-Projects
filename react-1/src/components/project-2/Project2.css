@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: space-between;
   overflow-y: hidden;
+  margin-bottom: 70px;
 }
 .project-2 h1 {
   font-size: 40px;

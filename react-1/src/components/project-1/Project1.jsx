@@ -30,7 +30,7 @@ export function Project1() {
   return (
     <div className="project-1">
       <div
-        className="multiple"
+        className={isMultipleAllowed ? "multiple active" : "multiple"}
         onClick={() => {
           setIsMultipleAllowed(!isMultipleAllowed);
         }}

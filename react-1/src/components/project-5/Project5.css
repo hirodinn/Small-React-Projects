@@ -22,7 +22,7 @@
   cursor: not-allowed !important;
 }
 
-.project-5 p {
+.project-5 > p {
   text-align: center;
   color: rgb(85, 85, 85);
 }

@@ -21,8 +21,8 @@ export function Project2() {
     "E",
     "F",
   ];
-  function generateRandom() {
-    if (format === "hex") {
+  function generateRandom(colorFormat = format) {
+    if (colorFormat === "hex") {
       let c = "#";
       for (let i = 0; i < 6; i++) {
         c += `${hexData[Math.floor(Math.random() * 16)]}`;
@@ -35,6 +35,7 @@ export function Project2() {
       setColor(c);
     }
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(generateRandom, []);
   return (
     <div className="project-2">
@@ -44,6 +45,7 @@ export function Project2() {
           <button
             onClick={() => {
               setFormat("hex");
+              generateRandom("hex");
             }}
           >
             Create HEX Color
@@ -51,14 +53,23 @@ export function Project2() {
           <button
             onClick={() => {
               setFormat("rgb");
+              generateRandom("rgb");
             }}
           >
             Create RGB Color
           </button>
-          <button onClick={generateRandom}>Generate Random Color</button>
+          <button
+            onClick={() => {
+              generateRandom();
+            }}
+          >
+            Generate Random Color
+          </button>
         </div>
-        <h1>{format}</h1>
-        <h1>{color}</h1>
+        <div className="text-container">
+          <h1>{format}</h1>
+          <h1>{color}</h1>
+        </div>
       </div>
     </div>
   );

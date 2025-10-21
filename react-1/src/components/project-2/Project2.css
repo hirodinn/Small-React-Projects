@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 .project-2 h1 {
   font-size: 40px;
@@ -18,4 +19,17 @@
 .project-2 .color-container .header button {
   padding: 4px 10px;
   margin: 0 5px;
+}
+
+.project-2 .color-container .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 20px);
+}
+
+.project-2 .color-container h1 {
+  font-size: 100px;
+  color: white;
 }

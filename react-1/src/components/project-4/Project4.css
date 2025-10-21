@@ -1,0 +1,58 @@
+.project-4 {
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  overflow: hidden;
+  width: 500px;
+}
+.project-4 .image-container {
+  height: 500px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: fit-content;
+  transition: left 1s;
+}
+.project-4 .image-container img {
+  height: 100%;
+  min-width: 500px;
+  max-width: 500px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.project-4 button {
+  position: absolute;
+  background-color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.project-4 button.left {
+  left: 0;
+}
+.project-4 button.right {
+  right: 0;
+}
+
+.project-4 .tracker {
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  color: gray;
+  margin: 0 3px;
+}
+.circle.fill {
+  color: white;
+}

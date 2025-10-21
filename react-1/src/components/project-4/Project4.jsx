@@ -36,14 +36,14 @@ export function Project4() {
         <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
       </div>
       <button className="left" onClick={decrement}>
-        <i class="fa-solid fa-arrow-left-long"></i>{" "}
+        <i className="fa-solid fa-arrow-left-long"></i>{" "}
       </button>
       <button className="right" onClick={increment}>
-        <i class="fa-solid fa-arrow-right-long"></i>
+        <i className="fa-solid fa-arrow-right-long"></i>
       </button>
       <div className="tracker">
         {items.map((item) => {
-          return <Circle i={item} currentIndex={currentIndex} />;
+          return <Circle i={item} currentIndex={currentIndex} key={item} />;
         })}
       </div>
     </div>

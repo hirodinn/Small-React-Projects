@@ -1,0 +1,27 @@
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.products-container .product {
+  border: 1px solid;
+}
+.products-container .product img {
+  max-width: 80%;
+}
+.project-5 .load-more {
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 3px;
+  padding: 7px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.disable {
+  cursor: not-allowed;
+}
+
+.project-5 p {
+  text-align: center;
+  color: rgb(85, 85, 85);
+}

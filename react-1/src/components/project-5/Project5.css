@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  padding: 0 20px;
 }
 .products-container .product {
   border: 1px solid;
@@ -24,4 +25,10 @@
 .project-5 p {
   text-align: center;
   color: rgb(85, 85, 85);
+}
+
+@media (max-width: 800px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

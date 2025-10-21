@@ -35,7 +35,7 @@ export function Project1() {
           setIsMultipleAllowed(!isMultipleAllowed);
         }}
       >
-        Enable Multiple Selection
+        {isMultipleAllowed ? "Enabled" : "Enable Multiple Selection"}
       </div>
       {infos.map((info, i) => {
         return (

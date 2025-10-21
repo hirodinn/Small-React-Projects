@@ -10,20 +10,20 @@
 
 .multiple {
   width: fit-content;
-  background-color: indianred;
+  background-color: #694300;
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
   color: white;
 }
 .multiple.active {
-  background-color: green;
+  background-color: rgb(6, 95, 6);
 }
 
 .project-1 .box {
   margin: 15px 0;
   width: 100%;
-  background-color: indianred;
+  background-color: #694300;
   padding: 30px;
   color: white;
   font-size: 18px;
@@ -37,6 +37,9 @@
 }
 .project-1 .box .header p:last-of-type {
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  text-align: center;
 }
 .project-1 .box.hide > p {
   display: none;

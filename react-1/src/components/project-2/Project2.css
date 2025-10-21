@@ -1,0 +1,21 @@
+.project-2 {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-2 h1 {
+  font-size: 40px;
+}
+.project-2 .color-container {
+  width: 100vw;
+  height: 90%;
+  margin-top: auto;
+  background-color: lightblue;
+}
+.project-2 .color-container .header button {
+  padding: 4px 10px;
+  margin: 0 5px;
+}

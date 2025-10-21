@@ -18,7 +18,7 @@
   cursor: pointer;
 }
 .disable {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 .project-5 p {

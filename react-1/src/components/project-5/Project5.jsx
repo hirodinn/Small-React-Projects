@@ -19,12 +19,13 @@ export function Project5() {
   }
   useEffect(() => {
     loadProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="project-5">
       <Products products={products} />
       <button
-        className="load-more"
+        className={toSkip >= 100 ? "disable load-more" : "load-more"}
         onClick={loadProducts}
         ref={buttonRef}
         disabled={toSkip >= 100}

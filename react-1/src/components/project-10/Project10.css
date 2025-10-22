@@ -1,0 +1,15 @@
+.project-10 button {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: violet;
+  margin: 0 10px;
+}
+.project-10 {
+  width: 70vw;
+  margin: 80px auto;
+}
+.project-10 .active {
+  background-color: lightgreen;
+}

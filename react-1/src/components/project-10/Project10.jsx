@@ -3,7 +3,7 @@ import "./Project10.css";
 export function Project10() {
   const infos = [
     <p className="normal-text">This is content for tab 1</p>,
-    <p className="notmal-text">this is content for tab 2</p>,
+    <p className="normal-text">this is content for tab 2</p>,
     <p className="bold-large">Some large content</p>,
   ];
   const [text, setText] = useState(infos[0]);

@@ -4,7 +4,7 @@ export function EachFolder({ folder }) {
   return (
     <div className="indent">
       <div>
-        {folder.name}
+        {folder.name ? folder.name : folder}
         {folder.child.length > 0 && (
           <button
             onClick={() => {
@@ -18,13 +18,9 @@ export function EachFolder({ folder }) {
 
       {expanded &&
         folder.child &&
-        folder.child.map((child, index) =>
-          typeof child === "string" ? (
-            <div>{child}</div>
-          ) : (
-            <EachFolder key={index} folder={child} />
-          )
-        )}
+        folder.child.map((child, index) => (
+          <EachFolder key={index} folder={child} />
+        ))}
     </div>
   );
 }

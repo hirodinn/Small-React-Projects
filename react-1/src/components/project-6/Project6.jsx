@@ -38,9 +38,12 @@ export function Project6() {
   };
 
   return (
-    <div className="project-6">
-      {<EachFolder folder={info} />}
-      <h1>Nested Tree View/Dynamic minus</h1>
-    </div>
+    <>
+      <h1 style={{ textAlign: "center", marginTop: "40px" }}>
+        Nested Tree View/Dynamic minus
+      </h1>
+
+      <div className="project-6">{<EachFolder folder={info} />}</div>
+    </>
   );
 }

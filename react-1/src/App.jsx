@@ -5,6 +5,7 @@ import { Project4 } from "./components/project-4/Project4";
 import { Project5 } from "./components/project-5/Project5";
 import { Project6 } from "./components/project-6/Project6";
 import { Project7 } from "./components/project-7/Project7";
+import { Project8 } from "./components/project-8/Project8";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Project5 />
       <Project6 />
       <Project7 />
+      <Project8 />
     </main>
   );
 }

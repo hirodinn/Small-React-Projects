@@ -1,0 +1,29 @@
+.project-8 {
+  width: 100vw;
+  height: 100vh;
+  --main-background: white;
+  --main-text: black;
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 300px;
+}
+.project-8.dark {
+  --main-background: black;
+  --main-text: white;
+}
+.project-8 h1 {
+  color: var(--main-text);
+  margin-bottom: 10px;
+}
+.project-8 button {
+  background-color: var(--main-text);
+  color: var(--main-background);
+  width: fit-content;
+  padding: 10px 0;
+  width: 170px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}

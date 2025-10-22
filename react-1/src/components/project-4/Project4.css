@@ -52,6 +52,7 @@
 .circle {
   color: gray;
   margin: 0 3px;
+  transition: color 1s;
 }
 .circle.fill {
   color: white;

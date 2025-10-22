@@ -29,8 +29,26 @@ export function Project6() {
         name: "Settings",
         child: [
           {
-            name: "another setting",
+            name: "account",
             child: [],
+          },
+          {
+            name: "Security",
+            child: [
+              {
+                name: "login",
+                child: [],
+              },
+              {
+                name: "register",
+                child: [
+                  {
+                    name: "Random data",
+                    child: [],
+                  },
+                ],
+              },
+            ],
           },
         ],
       },

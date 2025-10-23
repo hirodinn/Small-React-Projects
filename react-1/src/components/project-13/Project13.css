@@ -6,9 +6,15 @@
   align-items: center;
 }
 .project-13 input {
-  border: 2px solid;
+  border: 2px solid rgb(88, 88, 88);
   width: 50%;
   height: 30px;
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 20px;
+}
+
+.project-13 .suggestion-container .each {
+  margin: 5px 0;
+  font-size: 16px;
+  cursor: pointer;
 }

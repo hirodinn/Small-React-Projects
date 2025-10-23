@@ -97,7 +97,7 @@ export function Project14() {
               <div
                 className="box"
                 onClick={() => {
-                  if (!isDraw && !haveWinner) {
+                  if (!isDraw && !haveWinner && board[i][j] === " ") {
                     const temp = board;
                     temp[i][j] = currentSign;
                     setBoard(temp);

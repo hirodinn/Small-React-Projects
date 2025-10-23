@@ -1,6 +1,7 @@
 import { Project1 } from "./components/project-1/Project1";
 import { Project10 } from "./components/project-10/Project10";
 import { Project11 } from "./components/project-11/Project11";
+import { Project12 } from "./components/project-12/Project12";
 import { Project2 } from "./components/project-2/Project2";
 import { Project3 } from "./components/project-3/Project3";
 import { Project4 } from "./components/project-4/Project4";
@@ -24,6 +25,7 @@ export default function App() {
       <Project9 />
       <Project10 />
       <Project11 />
+      <Project12 />
     </main>
   );
 }

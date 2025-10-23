@@ -9,6 +9,7 @@ export function Project9() {
           document.documentElement.scrollHeight) *
           100
       );
+      console.log(window.scrollY);
     });
   }, []);
   return (

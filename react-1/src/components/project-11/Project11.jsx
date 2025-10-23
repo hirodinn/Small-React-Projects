@@ -15,7 +15,7 @@ export function Project11() {
   };
   useEffect(() => {
     if (showContent) {
-      window.scrollBy({ top: 530, behavior: "smooth" });
+      window.scrollTo({ top: 6030, behavior: "smooth" });
 
       window.addEventListener("wheel", preventScroll, { passive: false });
       window.addEventListener("touchmove", preventScroll, { passive: false });

@@ -6,6 +6,7 @@
   height: 80px;
   background-color: green;
   text-align: center;
+  z-index: 2;
 }
 .project-9 .tracker {
   position: absolute;

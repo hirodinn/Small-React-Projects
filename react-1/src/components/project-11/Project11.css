@@ -1,0 +1,54 @@
+.project-11 {
+  margin: 80px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-11 > button {
+  border: 1px solid;
+  padding: 2px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.project-11.show {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: orange;
+}
+.project-11 .content-container {
+  width: 70%;
+  height: 400px;
+  position: relative;
+}
+
+.project-11 .content-container button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+}
+
+.project-11 .content-container header {
+  width: 100%;
+  background-color: darkgreen;
+  height: 20%;
+}
+.project-11 .content-container main {
+  width: 100%;
+  background-color: white;
+  height: 60%;
+}
+.project-11 .content-container footer {
+  width: 100%;
+  background-color: darkgreen;
+  height: 20%;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Project14.css";
 export function Project14() {
   const [board, setBoard] = useState([
@@ -77,7 +77,17 @@ export function Project14() {
     }
     setIsDraw(draw);
   }
-  useEffect(() => {}, [board]);
+  function reset() {
+    setBoard([
+      [" ", " ", " "],
+      [" ", " ", " "],
+      [" ", " ", " "],
+    ]);
+    setHaveWinner(false);
+    setIsDraw(false);
+    setCurrentSign("X");
+  }
+
   return (
     <div className="project-14">
       <div className="board">
@@ -92,7 +102,6 @@ export function Project14() {
                     temp[i][j] = currentSign;
                     setBoard(temp);
                     gamePlay();
-                    console.log(board);
                   }
                 }}
               >
@@ -102,9 +111,12 @@ export function Project14() {
           });
         })}
       </div>
-      <div>{isDraw && "Draw"}</div>
-      <div>
-        {haveWinner && `winner player : ${currentSign === "X" ? "2" : "1"}`}
+      <div className="info">
+        <div>{isDraw && "Draw"}</div>
+        <div>
+          {haveWinner && `winner player : ${currentSign === "X" ? "2" : "1"}`}
+        </div>
+        {(isDraw || haveWinner) && <button onClick={reset}>Play Again</button>}
       </div>
     </div>
   );

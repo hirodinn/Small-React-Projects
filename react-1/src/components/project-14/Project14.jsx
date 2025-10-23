@@ -55,6 +55,18 @@ export function Project14() {
       board[0][2] !== " "
     )
       setHaveWinner(true);
+    else if (
+      board[0][0] === board[1][1] &&
+      board[1][1] === board[2][2] &&
+      board[0][0] !== " "
+    )
+      setHaveWinner(true);
+    else if (
+      board[0][2] === board[1][1] &&
+      board[1][1] === board[2][0] &&
+      board[0][2] !== " "
+    )
+      setHaveWinner(true);
   }
   function checkDraw() {
     let draw = true;
@@ -91,7 +103,9 @@ export function Project14() {
         })}
       </div>
       <div>{isDraw && "Draw"}</div>
-      <div>{haveWinner && "winner"}</div>
+      <div>
+        {haveWinner && `winner player : ${currentSign === "X" ? "2" : "1"}`}
+      </div>
     </div>
   );
 }

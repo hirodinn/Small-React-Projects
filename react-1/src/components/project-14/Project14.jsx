@@ -114,7 +114,7 @@ export function Project14() {
       <div className="info">
         <div>{isDraw && "Draw"}</div>
         <div>
-          {haveWinner && `winner player : ${currentSign === "X" ? "2" : "1"}`}
+          {haveWinner && `Winner : player ${currentSign === "X" ? "2" : "1"}`}
         </div>
         {(isDraw || haveWinner) && <button onClick={reset}>Play Again</button>}
       </div>

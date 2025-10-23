@@ -1,0 +1,14 @@
+.project-13 {
+  width: 60vw;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-13 input {
+  border: 2px solid;
+  width: 50%;
+  height: 30px;
+  font-size: 15px;
+  padding-left: 20px;
+}

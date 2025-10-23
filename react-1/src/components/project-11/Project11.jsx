@@ -1,7 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Project11.css";
 export function Project11() {
   const [showContent, setShowContent] = useState(false);
+  const preventScroll = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+  const handleKeyScroll = (e) => {
+    const keys = ["ArrowUp", "ArrowDown", "Space", "PageUp", "PageDown"];
+    if (keys.includes(e.code)) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
+  useEffect(() => {
+    if (showContent) {
+      window.scrollBy({ top: 530, behavior: "smooth" });
+
+      window.addEventListener("wheel", preventScroll, { passive: false });
+      window.addEventListener("touchmove", preventScroll, { passive: false });
+      window.addEventListener("keydown", handleKeyScroll, { passive: false });
+    } else {
+      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener("touchmove", preventScroll);
+      window.removeEventListener("keydown", handleKeyScroll);
+    }
+    return () => {
+      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener("touchmove", preventScroll);
+      window.removeEventListener("keydown", handleKeyScroll);
+    };
+  }, [showContent]);
   function Content() {
     return (
       <div className="content-container">

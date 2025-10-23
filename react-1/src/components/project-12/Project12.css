@@ -42,6 +42,7 @@
 
 .project-12 .content-container .info {
   display: flex;
+  margin-top: 10px;
 }
 .project-12 .content-container .info a {
   margin-right: 10px;

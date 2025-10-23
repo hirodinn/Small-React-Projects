@@ -1,0 +1,22 @@
+.project-14 {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-14 .board {
+  width: 50vw;
+  max-width: 500px;
+  height: 50vw;
+  max-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: repeat(3, 1fr);
+  border: 2px solid;
+}
+.project-14 .board .box {
+  border: 2px solid cyan;
+}

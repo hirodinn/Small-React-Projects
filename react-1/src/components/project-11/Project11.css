@@ -17,7 +17,7 @@
 .project-11.show {
   width: 100vw;
   height: calc(100vh - 80px);
-  background-color: orange;
+  background-color: #a4f100;
 }
 .project-11 .content-container {
   width: 70%;
@@ -39,8 +39,9 @@
 
 .project-11 .content-container header {
   width: 100%;
-  background-color: darkgreen;
+  background-color: #18b85a;
   height: 20%;
+  color: white;
 }
 .project-11 .content-container main {
   width: 100%;
@@ -49,6 +50,7 @@
 }
 .project-11 .content-container footer {
   width: 100%;
-  background-color: darkgreen;
+  background-color: #18b85a;
   height: 20%;
+  color: white;
 }

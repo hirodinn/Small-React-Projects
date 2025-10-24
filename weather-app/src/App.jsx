@@ -57,7 +57,7 @@ export default function App() {
                   {weatherDetails.name}, {weatherDetails.sys.country}
                 </h2>
                 <p className="date">{dayjs().format("dddd, MMMM DD, YYYY ")}</p>
-                <h1>283.63</h1>
+                <h1>{weatherDetails.main.temp}</h1>
                 <p>Overcast {weatherDetails.weather[0].main}</p>
                 <div className="weather-info">
                   <div className="wind">

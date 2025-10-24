@@ -8,6 +8,15 @@
   align-items: center;
   justify-content: center;
 }
+.project-16 .content {
+  cursor: pointer;
+}
 .project-16 > div {
   margin: 10px;
+}
+.project-16 button {
+  padding: 4px 10px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
 }

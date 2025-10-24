@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Project1 } from "./components/project-1/Project1";
 import { Project10 } from "./components/project-10/Project10";
 import { Project11 } from "./components/project-11/Project11";
@@ -15,6 +16,12 @@ import { Project8 } from "./components/project-8/Project8";
 import { Project9 } from "./components/project-9/Project9";
 
 export default function App() {
+  const [height, setHeight] = useState();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setHeight(window.scrollY);
+    });
+  }, []);
   return (
     <main>
       <Project1 />
@@ -25,7 +32,7 @@ export default function App() {
       <Project6 />
       <Project7 />
       <Project8 />
-      <Project9 />
+      <Project9 height={height} />
       <Project10 />
       <Project11 />
       <Project12 />

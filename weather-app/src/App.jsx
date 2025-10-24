@@ -16,7 +16,6 @@ export default function App() {
         }&appid=${apiKey}&units=metric`
       );
       setWeatherDetails(response.data);
-      console.log(response.data);
       setSuccessful(true);
     } catch (error) {
       console.error("Error fetching weather:", error);
@@ -58,7 +57,7 @@ export default function App() {
                 </h2>
                 <p className="date">{dayjs().format("dddd, MMMM DD, YYYY ")}</p>
                 <h1>{weatherDetails.main.temp}</h1>
-                <p>Overcast {weatherDetails.weather[0].main}</p>
+                <p>{weatherDetails.weather[0].description}</p>
                 <div className="weather-info">
                   <div className="wind">
                     <p>{weatherDetails.wind.speed}</p>

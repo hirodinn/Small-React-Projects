@@ -5,8 +5,9 @@ export default function App() {
         <input type="text" placeholder="Enter City Name" />
         <button>Search</button>
       </form>
-      <h3>London, GB</h3>
-      <h2>sunday, December 17, 2023</h2>
+      <h2>London, GB</h2>
+      <p className="date">sunday, December 17, 2023</p>
+      <h1>283.63</h1>
       <p>Overcast clouds</p>
       <div className="weather-info">
         <div className="wind">

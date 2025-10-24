@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 export default function App() {
   const [inputValue, setInputValue] = useState("");
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-  console.log(apiKey);
+  async function loadData() {
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${
+        inputValue.trim() === "" ? "Addis Ababa" : inputValue.trim()
+      }&appid=${apiKey}&units=metric`
+    );
+    console.log(response.data);
+  }
+  useEffect(() => {
+    loadData();
+  }, []);
   return (
     <div className="container">
       <form>

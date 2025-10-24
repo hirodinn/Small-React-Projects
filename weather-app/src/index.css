@@ -38,6 +38,9 @@ body {
   border-radius: 6px;
   padding-left: 10px;
 }
+.container form input:focus {
+  outline: none;
+}
 .container form button {
   color: white;
   background-color: black;

@@ -1,8 +1,17 @@
+import { useState } from "react";
 export default function App() {
+  const [inputValue, setInputValue] = useState("");
   return (
     <div className="container">
       <form>
-        <input type="text" placeholder="Enter City Name" />
+        <input
+          type="text"
+          placeholder="Enter City Name"
+          value={inputValue}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+          }}
+        />
         <button>Search</button>
       </form>
       <h2>London, GB</h2>

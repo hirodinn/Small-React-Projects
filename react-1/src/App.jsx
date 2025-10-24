@@ -16,10 +16,18 @@ import { Project8 } from "./components/project-8/Project8";
 import { Project9 } from "./components/project-9/Project9";
 
 export default function App() {
-  const [height, setHeight] = useState();
+  const [scrolledHeight, setscrolledHeight] = useState();
+  const [windowDimension, setWindowDimension] = useState([
+    window.innerWidth,
+    window.innerHeight,
+  ]);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setHeight(window.scrollY);
+      setscrolledHeight(window.scrollY);
+    });
+    window.addEventListener("resize", () => {
+      setWindowDimension([window.innerWidth, window.innerHeight]);
+      console.log("changed");
     });
   }, []);
   return (
@@ -32,13 +40,13 @@ export default function App() {
       <Project6 />
       <Project7 />
       <Project8 />
-      <Project9 height={height} />
+      <Project9 scrolledHeight={scrolledHeight} />
       <Project10 />
       <Project11 />
       <Project12 />
       <Project13 />
       <Project14 />
-      <Project16 />
+      <Project16 windowDimension={windowDimension} />
     </main>
   );
 }

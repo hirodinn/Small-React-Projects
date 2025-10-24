@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./Project9.css";
-export function Project9({ height }) {
+export function Project9({ scrolledHeight }) {
   useEffect(() => {}, []);
   return (
     <div className="project-9">
@@ -10,7 +10,7 @@ export function Project9({ height }) {
           className="fill"
           style={{
             width: `${
-              ((height + window.innerHeight) /
+              ((scrolledHeight + window.innerHeight) /
                 document.documentElement.scrollHeight) *
               100
             }%`,

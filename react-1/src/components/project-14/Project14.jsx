@@ -96,6 +96,7 @@ export function Project14() {
             return (
               <div
                 className="box"
+                key={j}
                 onClick={() => {
                   if (!isDraw && !haveWinner && board[i][j] === " ") {
                     const temp = board;

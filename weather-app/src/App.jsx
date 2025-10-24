@@ -1,6 +1,8 @@
 import { useState } from "react";
 export default function App() {
   const [inputValue, setInputValue] = useState("");
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+  console.log(apiKey);
   return (
     <div className="container">
       <form>

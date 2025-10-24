@@ -39,56 +39,58 @@ export function Project16({ windowDimension }) {
         <div>height : {windowDimension[1]}</div>
       </div>
       <h1>Scroll to Top and Bottom Feature</h1>
-      <p>This is the top Section</p>
-      <button
-        onClick={() => {
-          console.log(window.scrollY);
-          window.scrollTo({
-            top: 7875,
-            behavior: "smooth",
-          });
-        }}
-      >
-        Scroll To Bottom
-      </button>
-      <p style={{ maxWidth: "500px", margin: "30px auto" }}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-        labore, consectetur culpa reprehenderit eum aliquid sint accusantium
-        molestiae, unde voluptatem rerum iste amet placeat recusandae voluptate
-        maiores, quo voluptatibus? Suscipit corrupti dolorum ea exercitationem
-        alias, numquam ducimus quisquam debitis nobis laborum dolorem officiis
-        sapiente, tempora facilis officia accusantium dolores rem soluta quasi
-        minus totam reprehenderit. Tempore ducimus, placeat, beatae eum iste a
-        eligendi, inventore neque saepe amet quidem perspiciatis sit commodi
-        odio itaque nam ex necessitatibus asperiores dolorem vero praesentium
-        earum? Iste eveniet exercitationem consequatur earum temporibus
-        provident saepe explicabo, tenetur mollitia nam? Rerum ipsum incidunt,
-        dolorem minima aperiam sit?
-      </p>
-      <button
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        }}
-      >
-        Scroll to top
-      </button>
-      <br />
-      <h4>This is the bottom of the page</h4>
-      <br />
-      <h1>Scroll to particular section</h1>
-      <button
-        onClick={() => {
-          window.scrollTo({
-            top: 7775,
-            behavior: "smooth",
-          });
-        }}
-      >
-        click to scroll
-      </button>
+      <div>
+        <p>This is the top Section</p>
+        <button
+          onClick={() => {
+            console.log(window.scrollY);
+            window.scrollTo({
+              top: 7875,
+              behavior: "smooth",
+            });
+          }}
+        >
+          Scroll To Bottom
+        </button>
+        <p style={{ maxWidth: "500px", margin: "30px auto" }}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          labore, consectetur culpa reprehenderit eum aliquid sint accusantium
+          molestiae, unde voluptatem rerum iste amet placeat recusandae
+          voluptate maiores, quo voluptatibus? Suscipit corrupti dolorum ea
+          exercitationem alias, numquam ducimus quisquam debitis nobis laborum
+          dolorem officiis sapiente, tempora facilis officia accusantium dolores
+          rem soluta quasi minus totam reprehenderit. Tempore ducimus, placeat,
+          beatae eum iste a eligendi, inventore neque saepe amet quidem
+          perspiciatis sit commodi odio itaque nam ex necessitatibus asperiores
+          dolorem vero praesentium earum? Iste eveniet exercitationem
+          consequatur earum temporibus provident saepe explicabo, tenetur
+          mollitia nam? Rerum ipsum incidunt, dolorem minima aperiam sit?
+        </p>
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          Scroll to top
+        </button>
+        <br />
+        <h4>This is the bottom of the page</h4>
+        <br />
+        <h1>Scroll to particular section</h1>
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 7775,
+              behavior: "smooth",
+            });
+          }}
+        >
+          click to scroll
+        </button>
+      </div>
     </div>
   );
 }

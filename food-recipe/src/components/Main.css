@@ -1,13 +1,12 @@
 main {
   overflow-x: hidden;
 }
-main .recipe-container {
+.recipe-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
   width: 90vw;
-  border: 2px solid;
 }
 .each-recipe {
   width: 300px;

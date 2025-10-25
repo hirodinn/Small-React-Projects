@@ -23,8 +23,8 @@ export function Main() {
           return (
             <div className="each-recipe" key={i}>
               <img src={recipe.image_url} />
-              <p className="publisher">recipe.publisher</p>
-              <p className="title">recipe.title</p>
+              <p className="publisher">{recipe.publisher}</p>
+              <p className="title">{recipe.title}</p>
               <button>Recipe Details</button>
             </div>
           );

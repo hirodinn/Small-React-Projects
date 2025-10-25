@@ -3,13 +3,20 @@ import "./App.css";
 import { Main } from "./components/Main";
 import { Favorites } from "./components/Favorites";
 import { Recipe } from "./components/Recipe";
-
+import { useEffect, useState } from "react";
 function App() {
+  const [favorites, setFavorites] = useState(["664c8f193e7aa067e94e8873"]);
+  useEffect(() => {
+    console.log(favorites);
+  });
   return (
     <Routes>
       <Route index element={<Main />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="/recipe/:id" element={<Recipe />} />
+      <Route
+        path="/recipe/:id"
+        element={<Recipe favorites={favorites} setFavorites={setFavorites} />}
+      />
     </Routes>
   );
 }

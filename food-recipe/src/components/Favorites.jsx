@@ -5,20 +5,22 @@ export function Favorites({ favorites }) {
   return (
     <>
       <Header />
-      <div className="recipe-container">
-        {favorites.length > 0 &&
-          favorites.map((recipe, i) => {
-            return (
-              <div className="each-recipe" key={i}>
-                <img src={recipe.image_url} />
-                <p className="publisher">{recipe.publisher}</p>
-                <p className="title">{recipe.title}</p>
-                <NavLink to={`/recipe/${recipe.id}`}>
-                  <button>Recipe Details</button>
-                </NavLink>
-              </div>
-            );
-          })}
+      <div className="favorites-container">
+        <div className="recipe-container">
+          {favorites.length > 0 &&
+            favorites.map((recipe, i) => {
+              return (
+                <div className="each-recipe" key={i}>
+                  <img src={recipe.image_url} />
+                  <p className="publisher">{recipe.publisher}</p>
+                  <p className="title">{recipe.title}</p>
+                  <NavLink to={`/recipe/${recipe.id}`}>
+                    <button>Recipe Details</button>
+                  </NavLink>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </>
   );

@@ -15,6 +15,7 @@ export function Recipe() {
       console.log(response.data);
     };
     loadRecipe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -27,8 +28,8 @@ export function Recipe() {
               <img src={recipeDetails.recipe.image_url} />
             </div>
             <div className="info-container">
-              <p>{recipeDetails.recipe.publisher}</p>
-              <p>{recipeDetails.recipe.title}</p>
+              <p className="publisher">{recipeDetails.recipe.publisher}</p>
+              <p className="title">{recipeDetails.recipe.title}</p>
               <button></button>
               <h2>Ingredients</h2>
               {recipeDetails.recipe.ingredients.map((ingredient, i) => {

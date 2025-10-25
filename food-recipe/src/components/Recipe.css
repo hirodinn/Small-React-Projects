@@ -1,4 +1,20 @@
 .recipe-container {
-  padding-top: 80px;
   display: flex;
+  padding: 0 5vw;
+  padding-top: 80px;
+}
+.recipe-container .image-container {
+  width: 45%;
+}
+.recipe-container .image-container img {
+  width: 100%;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5%;
+}
+.recipe-container .info-container {
+  width: 46%;
+  margin-left: 4%;
 }

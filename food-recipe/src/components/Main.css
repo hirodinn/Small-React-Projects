@@ -28,11 +28,11 @@ main .recipe-container .each-recipe img {
   align-items: center;
   border-radius: inherit;
 }
-main .recipe-container .each-recipe .publisher {
+.publisher {
   margin: 10px 0;
   text-align: start;
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   color: steelblue;
 }
 main .recipe-container .each-recipe button {

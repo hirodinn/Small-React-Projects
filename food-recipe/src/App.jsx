@@ -5,7 +5,7 @@ import { Favorites } from "./components/Favorites";
 import { Recipe } from "./components/Recipe";
 import { useEffect, useState } from "react";
 function App() {
-  const [favorites, setFavorites] = useState(["664c8f193e7aa067e94e8873"]);
+  const [favorites, setFavorites] = useState([]);
   useEffect(() => {
     console.log(favorites);
   });

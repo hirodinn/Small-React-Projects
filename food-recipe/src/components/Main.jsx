@@ -1,4 +1,5 @@
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Header } from "./Header";
 import "./Main.css";
@@ -25,7 +26,9 @@ export function Main() {
               <img src={recipe.image_url} />
               <p className="publisher">{recipe.publisher}</p>
               <p className="title">{recipe.title}</p>
-              <button>Recipe Details</button>
+              <NavLink to={`/recipe/:${recipe.title}`}>
+                <button>Recipe Details</button>
+              </NavLink>
             </div>
           );
         })}

@@ -12,6 +12,7 @@ function App() {
   return (
     <Routes>
       <Route index element={<Main />} />
+      <Route path="/:search" element={<Main />} />
       <Route path="/favorites" element={<Favorites favorites={favorites} />} />
       <Route
         path="/recipe/:id"

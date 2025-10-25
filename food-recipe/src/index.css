@@ -5,3 +5,6 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
 }
+#root {
+  overflow-x: hidden;
+}

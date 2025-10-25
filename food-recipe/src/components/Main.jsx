@@ -10,7 +10,7 @@ export function Main() {
     const response = await axios.get(
       "https://forkify-api.herokuapp.com/api/v2/recipes?search=banana"
     );
-
+    console.log(response.data.data.recipes);
     setRecipes(response.data.data.recipes);
   }
   useEffect(() => {
@@ -26,7 +26,7 @@ export function Main() {
               <img src={recipe.image_url} />
               <p className="publisher">{recipe.publisher}</p>
               <p className="title">{recipe.title}</p>
-              <NavLink to={`/recipe/:${recipe.title}`}>
+              <NavLink to={`/recipe/${recipe.id}`}>
                 <button>Recipe Details</button>
               </NavLink>
             </div>

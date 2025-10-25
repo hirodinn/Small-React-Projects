@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route index element={<Main />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="/recipe/:title" element={<Recipe />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
     </Routes>
   );
 }

@@ -1,13 +1,14 @@
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Header } from "./Header";
-import { useParams } from "react-router-dom";
 import "./Main.css";
 
 export function Main() {
   const [recipes, setRecipes] = useState([]);
-  const { search } = useParams();
+  const location = useLocation();
+
+  const search = new URLSearchParams(location.search).get("search");
   async function loadData() {
     const response = await axios.get(
       `https://forkify-api.herokuapp.com/api/v2/recipes?search=${
@@ -19,6 +20,7 @@ export function Main() {
   }
   useEffect(() => {
     loadData();
+    console.log(search);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
   return (

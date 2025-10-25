@@ -16,7 +16,11 @@ export function Header() {
           }}
           value={inputValue}
           onKeyDown={(e) => {
-            if (e.key === "Enter") navigate(`/${inputValue}`);
+            if (e.key === "Enter") {
+              const dest =
+                inputValue.trim() !== "" ? `?search=${inputValue.trim()}` : "/";
+              navigate(dest);
+            }
           }}
         />
       </div>

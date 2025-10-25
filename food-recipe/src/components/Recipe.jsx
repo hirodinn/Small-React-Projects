@@ -6,22 +6,23 @@ import "./Recipe.css";
 export function Recipe({ favorites, setFavorites }) {
   const { id } = useParams();
   const [recipeDetails, setRecipeDetails] = useState(null);
+  const inFavorites = favorites.some((r) => r.id === id);
   useEffect(() => {
     const loadRecipe = async () => {
       const response = await axios.get(
         `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
       );
-      setRecipeDetails(response.data.data);
+      setRecipeDetails(response.data.data.recipe);
     };
     loadRecipe();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   function manageFavorites() {
-    if (favorites.includes(id)) {
-      const temp = favorites.filter((favorite) => favorite !== id);
+    if (inFavorites) {
+      const temp = favorites.filter((favorite) => favorite.id !== id);
       setFavorites(temp);
     } else {
-      setFavorites([...favorites, id]);
+      setFavorites([...favorites, recipeDetails]);
     }
   }
   return (
@@ -32,18 +33,16 @@ export function Recipe({ favorites, setFavorites }) {
         {recipeDetails && (
           <>
             <div className="image-container">
-              <img src={recipeDetails.recipe.image_url} />
+              <img src={recipeDetails.image_url} />
             </div>
             <div className="info-container">
-              <p className="publisher">{recipeDetails.recipe.publisher}</p>
-              <p className="title">{recipeDetails.recipe.title}</p>
+              <p className="publisher">{recipeDetails.publisher}</p>
+              <p className="title">{recipeDetails.title}</p>
               <button onClick={manageFavorites}>
-                {favorites.includes(id)
-                  ? "Remove from favorites"
-                  : "Add to favorites"}
+                {inFavorites ? "Remove from favorites" : "Add to favorites"}
               </button>
               <h2>Ingredients</h2>
-              {recipeDetails.recipe.ingredients.map((ingredient, i) => {
+              {recipeDetails.ingredients.map((ingredient, i) => {
                 return (
                   <p className="ingredient" key={i}>
                     {ingredient.quantity} {ingredient.unit}{" "}

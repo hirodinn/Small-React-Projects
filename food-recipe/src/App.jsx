@@ -8,11 +8,11 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   useEffect(() => {
     console.log(favorites);
-  });
+  }, [favorites]);
   return (
     <Routes>
       <Route index element={<Main />} />
-      <Route path="/favorites" element={<Favorites />} />
+      <Route path="/favorites" element={<Favorites favorites={favorites} />} />
       <Route
         path="/recipe/:id"
         element={<Recipe favorites={favorites} setFavorites={setFavorites} />}

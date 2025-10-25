@@ -29,18 +29,24 @@ export function Main() {
 
       <main>
         <div className="recipe-container">
-          {recipes.map((recipe, i) => {
-            return (
-              <div className="each-recipe" key={i}>
-                <img src={recipe.image_url} />
-                <p className="publisher">{recipe.publisher}</p>
-                <p className="title">{recipe.title}</p>
-                <NavLink to={`/recipe/${recipe.id}`}>
-                  <button>Recipe Details</button>
-                </NavLink>
-              </div>
-            );
-          })}
+          {recipes.length > 0 ? (
+            recipes.map((recipe, i) => {
+              return (
+                <div className="each-recipe" key={i}>
+                  <img src={recipe.image_url} />
+                  <p className="publisher">{recipe.publisher}</p>
+                  <p className="title">{recipe.title}</p>
+                  <NavLink to={`/recipe/${recipe.id}`}>
+                    <button>Recipe Details</button>
+                  </NavLink>
+                </div>
+              );
+            })
+          ) : (
+            <div className="no-recipe">
+              <h1>No Food Found</h1>
+            </div>
+          )}
         </div>
       </main>
     </>

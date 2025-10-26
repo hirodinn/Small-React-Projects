@@ -1,0 +1,39 @@
+main {
+  padding: 80px 8vw;
+}
+.product-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+.product-container .product {
+  width: 260px;
+  height: 350px;
+  border: 2px solid #8a5558;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-container .product p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+.product-container .product img {
+  width: 80%;
+  height: 70%;
+  object-fit: cover;
+  object-position: top;
+}
+.product-container .product button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #500201;
+  font-size: 15px;
+  cursor: pointer;
+}

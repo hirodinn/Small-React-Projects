@@ -1,14 +1,20 @@
 header {
   width: 100vw;
   height: 70px;
-  padding: 0 8%;
+  padding: 0 8vw;
   border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
 }
 header h1 {
   font-size: min(5vw, 45px);
+  text-transform: uppercase;
+  color: #78212b;
 }
 header a {
   text-decoration: none !important;

@@ -74,20 +74,52 @@ main .loading {
   align-items: center;
   justify-content: center;
 }
-main .loading .spinner {
-  width: 70px;
-  height: 70px;
-  border: 3px solid lightgray;
-  border-top-color: steelblue;
-  border-radius: 50%;
-  animation: spin 1s ease-in-out infinite;
+.spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.spinner::before,
+.spinner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-bottom-color: #350201;
+  animation: rotateA 2s linear infinite 0.5s;
+}
+.spinner::before {
+  transform: rotate(90deg);
+  animation: rotateB 2s linear infinite;
 }
 
-@keyframes spin {
-  0% {
+@keyframes rotateA {
+  0%,
+  25% {
     transform: rotate(0deg);
+  }
+  50%,
+  75% {
+    transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateB {
+  0%,
+  25% {
+    transform: rotate(90deg);
+  }
+  50%,
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(450deg);
   }
 }

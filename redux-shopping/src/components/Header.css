@@ -12,7 +12,7 @@ header {
   background-color: white;
 }
 header h1 {
-  font-size: min(5vw, 45px);
+  font-size: min(4vw, 40px);
   text-transform: uppercase;
   color: #78212b;
 }

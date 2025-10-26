@@ -4,7 +4,7 @@ import { Main } from "./components/Main";
 import { Cart } from "./components/Cart";
 
 function App() {
-  const [cart, setCart] = useState([{ id: 1 }]);
+  const [cart, setCart] = useState([]);
   return (
     <Routes>
       <Route index element={<Main cart={cart} setCart={setCart} />} />

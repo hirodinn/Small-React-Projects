@@ -21,9 +21,11 @@ export function Main({ cart, setCart }) {
     setCart(temp);
     console.log(temp);
   }
-  function addToCart(i) {
+  function addToCart(id, img, price) {
     const obj = {
-      id: i,
+      id,
+      img,
+      price,
     };
     setCart([...cart, obj]);
   }

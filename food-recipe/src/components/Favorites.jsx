@@ -1,7 +1,9 @@
 import { Header } from "./Header";
 import { NavLink } from "react-router-dom";
 import "./Favorites.css";
-export function Favorites({ favorites }) {
+import { useSelector } from "react-redux";
+export function Favorites() {
+  const favorites = useSelector((state) => state.favorites);
   return (
     <>
       <Header />

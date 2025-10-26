@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { addToFavorites, removeFromFavorites } from "../redux/favoritesAction";
 import { Header } from "./Header";
 import "./Recipe.css";
-export function Recipe({ favorites, setFavorites }) {
+export function Recipe() {
+  const dispatch = useDispatch();
+  const favorites = useSelector((state) => state.favorites);
   const { id } = useParams();
   const [recipeDetails, setRecipeDetails] = useState(null);
   const inFavorites = favorites.some((r) => r.id === id);
@@ -19,10 +23,15 @@ export function Recipe({ favorites, setFavorites }) {
   }, []);
   function manageFavorites() {
     if (inFavorites) {
-      const temp = favorites.filter((favorite) => favorite.id !== id);
-      setFavorites(temp);
+      dispatch(removeFromFavorites(id));
     } else {
-      setFavorites([...favorites, recipeDetails]);
+      const obj = {
+        image_url: recipeDetails.image_url,
+        publisher: recipeDetails.publisher,
+        id: id,
+        title: recipeDetails.title,
+      };
+      dispatch(addToFavorites(obj));
     }
   }
   return (

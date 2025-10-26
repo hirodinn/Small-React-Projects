@@ -15,7 +15,6 @@ export function Main() {
         search ? search : "banana"
       }`
     );
-    console.log(response.data.data.recipes);
     setRecipes(response.data.data.recipes);
   }
   useEffect(() => {

@@ -1,4 +1,4 @@
-export function addToFavorites({ obj }) {
+export function addToFavorites(obj) {
   return {
     type: "ADD",
     payload: obj,

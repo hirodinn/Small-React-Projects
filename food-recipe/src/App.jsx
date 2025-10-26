@@ -3,22 +3,12 @@ import "./App.css";
 import { Main } from "./components/Main";
 import { Favorites } from "./components/Favorites";
 import { Recipe } from "./components/Recipe";
-import { useEffect, useState } from "react";
 function App() {
-  const [favorites, setFavorites] = useState(
-    JSON.parse(localStorage.getItem("favorites")) || []
-  );
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
   return (
     <Routes>
       <Route index element={<Main />} />
-      <Route path="/favorites" element={<Favorites favorites={favorites} />} />
-      <Route
-        path="/recipe/:id"
-        element={<Recipe favorites={favorites} setFavorites={setFavorites} />}
-      />
+      <Route path="/favorites" element={<Favorites />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
     </Routes>
   );
 }

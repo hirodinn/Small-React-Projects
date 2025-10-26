@@ -6,16 +6,19 @@ import "./Main.css";
 
 export function Main() {
   const [recipes, setRecipes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
 
   const search = new URLSearchParams(location.search).get("search");
   async function loadData() {
+    setIsLoading(true);
     const response = await axios.get(
       `https://forkify-api.herokuapp.com/api/v2/recipes?search=${
         search ? search : "banana"
       }`
     );
     setRecipes(response.data.data.recipes);
+    setIsLoading(false);
   }
   useEffect(() => {
     loadData();
@@ -27,7 +30,11 @@ export function Main() {
 
       <main>
         <div className="recipe-container">
-          {recipes.length > 0 ? (
+          {isLoading ? (
+            <div className="loading">
+              <div className="spinner"></div>
+            </div>
+          ) : recipes.length > 0 ? (
             recipes.map((recipe, i) => {
               return (
                 <div className="each-recipe" key={i}>

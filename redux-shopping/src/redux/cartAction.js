@@ -1,4 +1,3 @@
-// cartAction.js
 export const addToCart = (item) => {
   return {
     type: "ADD",
@@ -9,6 +8,6 @@ export const addToCart = (item) => {
 export const removeFromCart = (id) => {
   return {
     type: "REMOVE",
-    payload: { id }, // Wrap the id in an object
+    payload: id, // Wrap the id in an object
   };
 };

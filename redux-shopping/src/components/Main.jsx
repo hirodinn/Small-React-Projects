@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import "./Main.css";
 import { useEffect, useState } from "react";
 
-export function Main() {
+export function Main({ cart, setCart }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const loadProducts = async () => {
@@ -12,6 +12,21 @@ export function Main() {
     };
     loadProducts();
   }, []);
+
+  function inCart(i) {
+    return cart.some((c) => c.id === i);
+  }
+  function removeFromCart(id) {
+    const temp = cart.filter((c) => c.id !== id);
+    setCart(temp);
+    console.log(temp);
+  }
+  function addToCart(i) {
+    const obj = {
+      id: i,
+    };
+    setCart([...cart, obj]);
+  }
   return (
     <>
       <Header />
@@ -27,7 +42,14 @@ export function Main() {
                       ? product.title.trim()
                       : product.title.trim().slice(0, 21) + "..."}
                   </p>
-                  <button>Add To Cart</button>
+                  <button
+                    onClick={() => {
+                      if (inCart(product.id)) removeFromCart(product.id);
+                      else addToCart(product.id, product.image, product.price);
+                    }}
+                  >
+                    {inCart(product.id) ? "Remove from Cart" : "Add To Cart"}
+                  </button>
                 </div>
               );
             })}

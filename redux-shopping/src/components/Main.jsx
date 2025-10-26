@@ -1,10 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../redux/cartAction";
 import axios from "axios";
 import { Header } from "./Header";
 import "./Main.css";
 import { useEffect, useState } from "react";
 
-export function Main({ cart, setCart }) {
+export function Main() {
+  const cart = useSelector((state) => state.cart); // Correct slice
+  const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const loadProducts = async () => {
       const response = await axios.get("https://fakestoreapi.com/products");
@@ -13,48 +18,40 @@ export function Main({ cart, setCart }) {
     loadProducts();
   }, []);
 
-  function inCart(i) {
-    return cart.some((c) => c.id === i);
+  function inCart(id) {
+    return cart.some((c) => c.id === id);
   }
-  function removeFromCart(id) {
-    const temp = cart.filter((c) => c.id !== id);
-    setCart(temp);
-    console.log(temp);
-  }
-  function addToCart(id, img, price) {
-    const obj = {
-      id,
-      img,
-      price,
-    };
-    setCart([...cart, obj]);
-  }
+
   return (
     <>
       <Header />
       <main className="main">
         <div className="product-container">
-          {products &&
-            products.map((product, i) => {
-              return (
-                <div className="product" key={i}>
-                  <img src={product.image} />
-                  <p className="title">
-                    {product.title.trim().length <= 20
-                      ? product.title.trim()
-                      : product.title.trim().slice(0, 21) + "..."}
-                  </p>
-                  <button
-                    onClick={() => {
-                      if (inCart(product.id)) removeFromCart(product.id);
-                      else addToCart(product.id, product.image, product.price);
-                    }}
-                  >
-                    {inCart(product.id) ? "Remove from Cart" : "Add To Cart"}
-                  </button>
-                </div>
-              );
-            })}
+          {products.map((product) => (
+            <div className="product" key={product.id}>
+              <img src={product.image} alt={product.title} />
+              <p className="title">
+                {product.title.length <= 20
+                  ? product.title
+                  : product.title.slice(0, 21) + "..."}
+              </p>
+              <button
+                onClick={() =>
+                  inCart(product.id)
+                    ? dispatch(removeFromCart(product.id))
+                    : dispatch(
+                        addToCart({
+                          id: product.id,
+                          img: product.image,
+                          price: product.price,
+                        })
+                      )
+                }
+              >
+                {inCart(product.id) ? "Remove from Cart" : "Add To Cart"}
+              </button>
+            </div>
+          ))}
         </div>
       </main>
     </>

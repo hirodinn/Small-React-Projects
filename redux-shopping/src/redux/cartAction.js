@@ -1,12 +1,14 @@
+// cartAction.js
 export const addToCart = (item) => {
   return {
     type: "ADD",
     payload: item, // The new item to be added
   };
 };
-export const removeFromCart = (item) => {
+
+export const removeFromCart = (id) => {
   return {
     type: "REMOVE",
-    payload: item, // The item ID to remove
+    payload: { id }, // Wrap the id in an object
   };
 };

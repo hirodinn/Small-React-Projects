@@ -1,0 +1,18 @@
+header {
+  width: 100vw;
+  height: 70px;
+  padding: 0 8%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: min(5vw, 45px);
+}
+header a {
+  text-decoration: none !important;
+  color: black;
+  margin: 0 0.5vw;
+  font-size: 20px;
+}

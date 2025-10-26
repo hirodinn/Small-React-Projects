@@ -5,9 +5,11 @@ import { Favorites } from "./components/Favorites";
 import { Recipe } from "./components/Recipe";
 import { useEffect, useState } from "react";
 function App() {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(
+    JSON.parse(localStorage.getItem("favorites")) || []
+  );
   useEffect(() => {
-    console.log(favorites);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
   return (
     <Routes>

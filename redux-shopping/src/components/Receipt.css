@@ -12,6 +12,10 @@
   display: flex;
   justify-content: space-between;
   margin: 15px 0;
+  font-size: 15px;
+}
+.receipt div p:last-child {
+  font-weight: bold;
 }
 .receipt .total-cost {
   position: absolute;
@@ -19,4 +23,9 @@
   right: 0;
   font-size: 20px;
   font-weight: bold;
+}
+@media (max-width: 950px) {
+  .receipt {
+    width: 40%;
+  }
 }

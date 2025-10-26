@@ -36,4 +36,8 @@ main {
   background-color: #500201;
   font-size: 15px;
   cursor: pointer;
+  box-shadow: 0 2px 1px #500201;
+}
+.product-container .product button:active {
+  box-shadow: none;
 }

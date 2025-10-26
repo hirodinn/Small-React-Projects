@@ -19,7 +19,6 @@ export function Main() {
   }
   useEffect(() => {
     loadData();
-    console.log(search);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
   return (

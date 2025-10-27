@@ -4,6 +4,7 @@ main header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 }
 main header h1 {
   font-size: 40px;
@@ -22,7 +23,7 @@ main header button {
 
 main .main {
   width: 100%;
-  height: 370px;
+  height: 340px;
   background-color: white;
   display: flex;
 }
@@ -70,7 +71,8 @@ main footer > div {
 }
 
 main footer > div h1 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  color: #893839;
 }
 
 main footer .transaction-expense-item,
@@ -88,4 +90,45 @@ main footer .transaction-expense-item {
 }
 main footer .transaction-income-item {
   background-color: #e6f7fb;
+}
+
+/* add transaction pop up*/
+
+main .add-transaction {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.233);
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+main .add-transaction .add-transaction-container {
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+}
+main .add-transaction .add-transaction-container form input {
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+main .add-transaction .add-transaction-container label {
+  margin: 6px 0;
+  font-size: 17px;
+}
+main .add-transaction .add-transaction-container .block {
+  display: block;
+}
+
+main .add-transaction .add-transaction-container .radio-buttons {
+  margin: 15px 0;
+}
+main .add-transaction .add-transaction-container .radio-buttons label {
+  margin: 0 10px;
 }

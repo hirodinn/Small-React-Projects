@@ -74,14 +74,14 @@ export function Main() {
           <div
             className="circle"
             style={{
-              background: `conic-gradient(#4caf50 0% ${
+              background: `conic-gradient(#3f00c0 0% ${
                 totalIncome > 0 || totalExpense > 0
-                  ? totalIncome / (totalIncome + totalExpense)
-                  : "100"
-              }%, #f44336 ${
+                  ? (totalIncome / (totalIncome + totalExpense)) * 100
+                  : "99.5"
+              }%, #ff5d4a ${
                 totalIncome > 0 || totalExpense > 0
-                  ? totalIncome / (totalIncome + totalExpense)
-                  : "0"
+                  ? (totalIncome / (totalIncome + totalExpense)) * 100
+                  : "99.5"
               }% 100%)`,
             }}
           ></div>
@@ -90,25 +90,29 @@ export function Main() {
       <footer>
         <div className="expense">
           <h1>Expense</h1>
-          {expenseTransaction.map((expense, i) => {
-            return (
-              <div className="transaction-expense-item" key={i}>
-                <p>{expense.description}</p>
-                <p>{expense.amount}</p>
-              </div>
-            );
-          })}
+          <div className="list-container">
+            {expenseTransaction.map((expense, i) => {
+              return (
+                <div className="transaction-expense-item" key={i}>
+                  <p>{expense.description}</p>
+                  <p>{expense.amount}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="income">
           <h1>Income</h1>
-          {incomeTranscation.map((income, i) => {
-            return (
-              <div className="transaction-income-item" key={i}>
-                <p>{income.description}</p>
-                <p>{income.amount}</p>
-              </div>
-            );
-          })}
+          <div className="list-container">
+            {incomeTranscation.map((income, i) => {
+              return (
+                <div className="transaction-income-item" key={i}>
+                  <p>{income.description}</p>
+                  <p>{income.amount}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </footer>
       {showAddTransaction && (

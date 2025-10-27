@@ -23,6 +23,22 @@ export function Main() {
           <div className="circle"></div>
         </div>
       </div>
+      <footer>
+        <div className="expense">
+          <h1>Expense</h1>
+          <div className="transaction-expense-item">
+            <p>descriprtion</p>
+            <p>amount</p>
+          </div>
+        </div>
+        <div className="income">
+          <h1>Income</h1>
+          <div className="transaction-income-item">
+            <p>descriprtion</p>
+            <p>amount</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

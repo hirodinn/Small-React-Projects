@@ -1,0 +1,25 @@
+main {
+  padding-top: 70px;
+}
+main header {
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+main header h1 {
+  font-size: 40px;
+  color: #468ade;
+  font-weight: bold;
+}
+
+main header button {
+  padding: 10px 14px;
+  font-size: 18px;
+  background-color: #56a4f0;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+}

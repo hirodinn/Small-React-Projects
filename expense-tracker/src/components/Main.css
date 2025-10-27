@@ -68,6 +68,8 @@ main footer > div {
   background-color: white;
   padding: 25px 20px;
   max-height: 200px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 main footer > div h1 {
@@ -112,7 +114,7 @@ main .add-transaction .add-transaction-container {
   position: relative;
   padding: 20px;
 }
-main .add-transaction .add-transaction-container form input {
+main .add-transaction .add-transaction-container form > input {
   height: 40px;
   width: 100%;
   padding-left: 10px;

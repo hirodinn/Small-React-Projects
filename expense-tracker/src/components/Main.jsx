@@ -1,11 +1,43 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Main.css";
 
 export function Main() {
   const [incomeTranscation, setIncomeTransaction] = useState([]);
   const [expenseTransaction, setExpenseTransaction] = useState([]);
+  const [description, setDescription] = useState("");
+  const [amount, setAmount] = useState("");
   const [showAddTransaction, setShowAddTransaction] = useState(false);
   const [selectedRadio, setSelectedRadio] = useState("expense");
+  function addTransaction() {
+    console.log("added");
+    setShowAddTransaction(false);
+    if (selectedRadio === "expense") {
+      const temp = incomeTranscation;
+      temp.push({
+        description: description.trim(),
+        amount: Number(amount),
+      });
+      setIncomeTransaction(temp);
+    } else {
+      const temp = expenseTransaction;
+      temp.push({
+        description: description.trim(),
+        amount: Number(amount),
+      });
+      setExpenseTransaction(temp);
+    }
+  }
+  function closePop() {
+    setShowAddTransaction(false);
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    // ✅ HTML5 validation handles required fields
+    if (e.target.checkValidity()) {
+      addTransaction();
+    }
+  }
   return (
     <main>
       <header>
@@ -33,26 +65,36 @@ export function Main() {
       <footer>
         <div className="expense">
           <h1>Expense</h1>
-          <div className="transaction-expense-item">
-            <p>descriprtion</p>
-            <p>amount</p>
-          </div>
+          {expenseTransaction.map((expense, i) => {
+            return (
+              <div className="transaction-expense-item" key={i}>
+                <p>{expense.description}</p>
+                <p>{expense.Number}</p>
+              </div>
+            );
+          })}
         </div>
         <div className="income">
           <h1>Income</h1>
-          <div className="transaction-income-item">
-            <p>descriprtion</p>
-            <p>amount</p>
-          </div>
+          {incomeTranscation.map((income, i) => {
+            return (
+              <div className="transaction-income-item" key={i}>
+                <p>{income.description}</p>
+                <p>{income.Number}</p>
+              </div>
+            );
+          })}
         </div>
       </footer>
       {showAddTransaction && (
         <div className="add-transaction">
           <div className="add-transaction-container">
-            <button className="close">X</button>
+            <button className="close" onClick={closePop}>
+              X
+            </button>
 
             <h1>Add New Transaction</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               <label htmlFor="desctiption" className="block">
                 Enter Description
               </label>
@@ -60,36 +102,47 @@ export function Main() {
                 type="text"
                 placeholder="Enter Transaction description"
                 id="description"
+                required
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
               />
-              <label htmlFor="desctiption" className="block">
+              <label htmlFor="amount" className="block">
                 Enter Amount
               </label>
-              <input type="text" placeholder="Enter Transaction amount" />
+              <input
+                type="number"
+                min={0}
+                placeholder="Enter Transaction amount"
+                required
+                id="amount"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+              />
               <br />
+              <div className="radio-buttons">
+                <input
+                  type="radio"
+                  name="type"
+                  id="expense"
+                  value="expense"
+                  checked={selectedRadio === "expense"}
+                  onChange={(e) => setSelectedRadio(e.target.value)}
+                />
+                <label htmlFor="expense">Expense</label>
+                <input
+                  type="radio"
+                  name="type"
+                  id="income"
+                  value="income"
+                  onChange={(e) => setSelectedRadio(e.target.value)}
+                />
+                <label htmlFor="income">Income</label>
+              </div>
+              <div className="buttons">
+                <button onClick={closePop}>Cancel</button>
+                <button type="submit">Add</button>
+              </div>
             </form>
-            <div className="radio-buttons">
-              <input
-                type="radio"
-                name="type"
-                id="expense"
-                value="expense"
-                checked={selectedRadio === "expense"}
-                onChange={(e) => setSelectedRadio(e.target.value)}
-              />
-              <label htmlFor="expense">Expense</label>
-              <input
-                type="radio"
-                name="type"
-                id="income"
-                value="income"
-                onChange={(e) => setSelectedRadio(e.target.value)}
-              />
-              <label htmlFor="income">Income</label>
-            </div>
-            <div className="buttons">
-              <button>Cancel</button>
-              <button>Add</button>
-            </div>
           </div>
         </div>
       )}

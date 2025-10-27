@@ -50,11 +50,10 @@ main .main .info > div {
 }
 
 main .main .chart .circle {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 2px solid;
-  background-color: #4100c5;
+  margin: 20px auto;
 }
 
 main footer {

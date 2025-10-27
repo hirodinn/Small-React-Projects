@@ -71,7 +71,20 @@ export function Main() {
           </div>
         </div>
         <div className="chart">
-          <div className="circle"></div>
+          <div
+            className="circle"
+            style={{
+              background: `conic-gradient(#4caf50 0% ${
+                totalIncome > 0 || totalExpense > 0
+                  ? totalIncome / (totalIncome + totalExpense)
+                  : "100"
+              }%, #f44336 ${
+                totalIncome > 0 || totalExpense > 0
+                  ? totalIncome / (totalIncome + totalExpense)
+                  : "0"
+              }% 100%)`,
+            }}
+          ></div>
         </div>
       </div>
       <footer>

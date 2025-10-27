@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "apexcharts": "^5.3.5",
     "react": "^19.1.1",
+    "react-apexcharts": "^1.8.0",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {

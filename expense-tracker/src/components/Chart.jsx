@@ -5,8 +5,8 @@ export function CircleChart({ income, expense }) {
   const hasData = income > 0 || expense > 0;
 
   const series = hasData ? [income, expense] : [100];
-  const colors = hasData ? ["#4caf50", "#f44336"] : ["#4caf50"]; // green for no data
-  const labels = hasData ? ["Income", "Expense"] : []; // empty if no data
+  const colors = hasData ? ["#213ebf", "#fd5e53"] : ["#23d3eb9d"];
+  const labels = hasData ? ["Income", "Expense"] : [];
 
   const options = {
     chart: {
@@ -16,10 +16,10 @@ export function CircleChart({ income, expense }) {
     labels: labels,
     colors: colors,
     dataLabels: {
-      enabled: false, // hide labels inside the chart
+      enabled: false,
     },
     tooltip: {
-      enabled: hasData, // ❌ disable tooltip if no data
+      enabled: hasData,
       y: {
         formatter: (value) => {
           return `$${value}`;
@@ -27,11 +27,11 @@ export function CircleChart({ income, expense }) {
       },
     },
     legend: {
-      show: hasData, // ❌ hide legend if no data
+      show: hasData,
       position: "bottom",
     },
     stroke: {
-      show: false, // no borders
+      show: false,
     },
   };
 

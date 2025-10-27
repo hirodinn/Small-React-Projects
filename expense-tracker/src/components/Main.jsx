@@ -8,10 +8,19 @@ export function Main() {
   const [amount, setAmount] = useState("");
   const [showAddTransaction, setShowAddTransaction] = useState(false);
   const [selectedRadio, setSelectedRadio] = useState("expense");
+  let totalIncome = 0;
+  incomeTranscation.forEach((income) => {
+    totalIncome += income.amount;
+  });
+  let totalExpense = 0;
+  expenseTransaction.forEach((expense) => {
+    totalExpense += expense.amount;
+  });
+  const balance = totalIncome - totalExpense;
   function addTransaction() {
     console.log("added");
     setShowAddTransaction(false);
-    if (selectedRadio === "expense") {
+    if (selectedRadio !== "expense") {
       const temp = incomeTranscation;
       temp.push({
         description: description.trim(),
@@ -26,6 +35,9 @@ export function Main() {
       });
       setExpenseTransaction(temp);
     }
+    setAmount("");
+    setDescription("");
+    setSelectedRadio("expense");
   }
   function closePop() {
     setShowAddTransaction(false);
@@ -48,13 +60,13 @@ export function Main() {
       </header>
       <div className="main">
         <div className="info">
-          <p>Balance is $ 0</p>
+          <p>Balance is $ {balance}</p>
           <div className="total-income">
-            <h1>$ 500</h1>
+            <h1>$ {totalExpense}</h1>
             <p>Total Income</p>
           </div>
           <div className="total-expense">
-            <h1>$ 500</h1>
+            <h1>$ {totalIncome}</h1>
             <p>Total Income</p>
           </div>
         </div>
@@ -69,7 +81,7 @@ export function Main() {
             return (
               <div className="transaction-expense-item" key={i}>
                 <p>{expense.description}</p>
-                <p>{expense.Number}</p>
+                <p>{expense.amount}</p>
               </div>
             );
           })}
@@ -80,7 +92,7 @@ export function Main() {
             return (
               <div className="transaction-income-item" key={i}>
                 <p>{income.description}</p>
-                <p>{income.Number}</p>
+                <p>{income.amount}</p>
               </div>
             );
           })}

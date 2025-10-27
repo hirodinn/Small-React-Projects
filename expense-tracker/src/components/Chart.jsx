@@ -31,7 +31,9 @@ export function CircleChart({ income, expense }) {
       position: "bottom",
     },
     stroke: {
-      show: false,
+      show: true, // true to show borders
+      width: 2, // thickness of the border
+      colors: ["#fff"], // color of borders between slices
     },
   };
 

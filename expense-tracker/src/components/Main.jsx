@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { CircleChart } from "./Chart";
+
 import "./Main.css";
 
 export function Main() {
@@ -71,20 +73,9 @@ export function Main() {
           </div>
         </div>
         <div className="chart">
-          <div
-            className="circle"
-            style={{
-              background: `conic-gradient(#3f00c0 0% ${
-                totalIncome > 0 || totalExpense > 0
-                  ? (totalIncome / (totalIncome + totalExpense)) * 100
-                  : "99.5"
-              }%, #ff5d4a ${
-                totalIncome > 0 || totalExpense > 0
-                  ? (totalIncome / (totalIncome + totalExpense)) * 100
-                  : "99.5"
-              }% 100%)`,
-            }}
-          ></div>
+          <div className="circle">
+            <CircleChart income={totalIncome} expense={totalExpense} />
+          </div>
         </div>
       </div>
       <footer>

@@ -107,7 +107,7 @@ main .add-transaction {
 }
 main .add-transaction .add-transaction-container {
   width: 600px;
-  height: 300px;
+  height: 320px;
   background-color: white;
   position: relative;
   padding: 20px;
@@ -131,4 +131,30 @@ main .add-transaction .add-transaction-container .radio-buttons {
 }
 main .add-transaction .add-transaction-container .radio-buttons label {
   margin: 0 10px;
+  cursor: pointer;
+}
+main .add-transaction .add-transaction-container .radio-buttons input {
+  cursor: pointer;
+}
+
+main .add-transaction .add-transaction-container .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+main .add-transaction .add-transaction-container .buttons button {
+  padding: 8px 10px;
+  margin: 0 10px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+main .add-transaction .add-transaction-container .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
 }

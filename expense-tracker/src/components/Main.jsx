@@ -49,6 +49,8 @@ export function Main() {
       {showAddTransaction && (
         <div className="add-transaction">
           <div className="add-transaction-container">
+            <button className="close">X</button>
+
             <h1>Add New Transaction</h1>
             <form>
               <label htmlFor="desctiption" className="block">
@@ -83,6 +85,10 @@ export function Main() {
                 onChange={(e) => setSelectedRadio(e.target.value)}
               />
               <label htmlFor="income">Income</label>
+            </div>
+            <div className="buttons">
+              <button>Cancel</button>
+              <button>Add</button>
             </div>
           </div>
         </div>

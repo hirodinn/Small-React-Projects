@@ -2,54 +2,38 @@ import React from "react";
 import Chart from "react-apexcharts";
 
 export function CircleChart({ income, expense }) {
-  const series = [income, expense]; // numeric values
-  const labels = ["Income", "Expense"];
+  const hasData = income > 0 || expense > 0;
+
+  const series = hasData ? [income, expense] : [100];
+  const colors = hasData ? ["#4caf50", "#f44336"] : ["#4caf50"]; // green for no data
+  const labels = hasData ? ["Income", "Expense"] : []; // empty if no data
 
   const options = {
     chart: {
-      type: "donut",
+      type: "pie",
+      toolbar: { show: false },
     },
     labels: labels,
-    colors: ["#4caf50", "#f44336"],
-    tooltip: {
-      enabled: true,
-      y: {
-        formatter: (value) => `$${value}`,
-      },
-    },
-    legend: {
-      position: "bottom",
-    },
+    colors: colors,
     dataLabels: {
-      enabled: true,
-      formatter: (val, opts) => {
-        const value = opts.w.config.series[opts.seriesIndex];
-        return `$${value}`;
-      },
-      style: {
-        fontSize: "14px",
-      },
+      enabled: false, // hide labels inside the chart
     },
-    plotOptions: {
-      pie: {
-        donut: {
-          size: "65%",
-          labels: {
-            show: true,
-            total: {
-              show: true,
-              label: "Total",
-              formatter: () => `$${income + expense}`,
-            },
-          },
+    tooltip: {
+      enabled: hasData, // ❌ disable tooltip if no data
+      y: {
+        formatter: (value) => {
+          return `$${value}`;
         },
       },
     },
+    legend: {
+      show: hasData, // ❌ hide legend if no data
+      position: "bottom",
+    },
+    stroke: {
+      show: false, // no borders
+    },
   };
 
-  return (
-    <div style={{ width: "350px", margin: "auto" }}>
-      <Chart options={options} series={series} type="donut" height={320} />
-    </div>
-  );
+  return <Chart options={options} series={series} type="pie" height={300} />;
 }

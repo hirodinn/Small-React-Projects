@@ -9,7 +9,7 @@ function App() {
       onClick={() => setSpaceBetween(!spaceBetween)}
     >
       <div
-        className={`bg-blue-400 w-[250px] h-[100px] transition-all duration-1000`}
+        className={`bg-secondary w-[250px] h-[100px] transition-all duration-1000`}
         style={{ marginRight: spaceBetween ? "20rem" : "1rem" }}
       ></div>
       <div

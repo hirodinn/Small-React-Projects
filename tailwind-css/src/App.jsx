@@ -1,20 +1,20 @@
 import { useState } from "react";
 
 function App() {
-  const [spaceBetween, setSpaceBetween] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div
-      className="text-8xl bg-gray-200 text-orange-600 h-screen flex justify-center items-center"
-      onClick={() => setSpaceBetween(!spaceBetween)}
+      className={`text-8xl bg-primary-background h-screen flex justify-center items-center ${
+        darkMode && "dark"
+      }`}
+      onClick={() => setDarkMode(!darkMode)}
     >
       <div
-        className={`bg-secondary w-[250px] h-[100px] animate-loadInfinite`}
-        style={{ marginRight: spaceBetween ? "20rem" : "1rem" }}
+        className={`bg-box-1 w-[250px] h-[100px] animate-loadInfinite`}
       ></div>
       <div
-        className={`bg-red-400 w-[250px] h-[100px] animate-loadInfinite`}
-        style={{ marginLeft: spaceBetween ? "20rem" : "1rem" }}
+        className={`bg-box-2 w-[250px] h-[100px] animate-loadInfinite`}
       ></div>
     </div>
   );

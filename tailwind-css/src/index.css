@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @theme {
-  --color-secondary: #f97316;
+  --color-primary-background: #f97316;
+  --color-box-1: lightgreen;
+  --color-box-2: lightblue;
   --animate-loadInfinite: loadInfinite 1s ease-in-out infinite;
 }
 
@@ -14,4 +16,9 @@
   100% {
     margin: 0;
   }
+}
+.dark {
+  --color-box-1: rgb(48, 78, 48);
+  --color-box-2: rgb(41, 51, 54);
+  --color-primary-background: black;
 }

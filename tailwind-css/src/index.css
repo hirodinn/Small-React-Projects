@@ -19,5 +19,7 @@
 
 :root {
   --primary-background: #f3e5d8;
+  --secondary-background: #fff7fc;
+  --primary-color: #7f4960;
   --gray-color: #686663;
 }

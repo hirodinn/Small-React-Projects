@@ -1,15 +1,1 @@
 @import "tailwindcss";
-
-:root {
-  --primary-background: rgb(255, 209, 255);
-  --box-1: rgb(212, 233, 91);
-  --box-2: rgb(247, 132, 132);
-  --vertical-center-absolute: 50%;
-  --vertical-translate: -50%;
-}
-
-.dark {
-  --primary-background: rgb(26, 31, 54);
-  --box-1: rgb(212, 233, 91);
-  --box-2: rgb(247, 132, 132);
-}

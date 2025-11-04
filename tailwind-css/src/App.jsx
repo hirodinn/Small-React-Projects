@@ -27,7 +27,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <div className="border-b-2 border-gray-400 py-7 box-border">
+        <div className="border-b-2 border-gray-400 py-7 box-border font-outfit text-[19px]">
           <h1 className="text-(--secondary-color) text-3xl font-youngserif mb-5 box-border">
             Ingredients
           </h1>
@@ -41,41 +41,69 @@ function App() {
             </li>
           </ul>
         </div>
-        <div className="border-b-2 border-gray-400 py-7 box-border">
+        <div className="border-b-2 border-gray-400 py-7 box-border text-(--gray-color)">
           <h1 className="text-(--secondary-color) text-3xl font-youngserif mb-5 box-border">
             Instructions
           </h1>
           <ol className="box-border pl-9 list-decimal marker:text-(--secondary-color) marker:font-bold font-outfit text-justify">
             <li className="my-2 pl-2.5">
-              <strong>Beat the eggs</strong>: In a bowl, beat the eggs with a
-              pinch of salt and pepper until they are well mixed. You can add a
-              tablespoon of water or milk for a fluffier texture.
+              <strong className="text-black">Beat the eggs</strong>: In a bowl,
+              beat the eggs with a pinch of salt and pepper until they are well
+              mixed. You can add a tablespoon of water or milk for a fluffier
+              texture.
             </li>
             <li className="my-2 pl-2.5">
-              <strong>Heat the pan</strong>: Place a non-stick frying pan over
-              medium heat and add buttor or oil
+              <strong className="text-black">Heat the pan</strong>: Place a
+              non-stick frying pan over medium heat and add buttor or oil
             </li>
             <li className="my-2 pl-2.5">
-              <strong>Cook the omelette</strong>:Once the button is melted and
-              bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly
-              coat the surface.
+              <strong className="text-black">Cook the omelette</strong>:Once the
+              button is melted and bubbling, pour in the eggs. Tilt the pan to
+              ensure the eggs evenly coat the surface.
             </li>
             <li className="my-2 pl-2.5">
-              <strong>Add fillings (optional)</strong>: When the eggs begin to
-              set at the edges but are still slightly runny in the middle,
-              sprinkle your chosen fillings over one half of the omelette
+              <strong className="text-black">Add fillings (optional)</strong>:
+              When the eggs begin to set at the edges but are still slightly
+              runny in the middle, sprinkle your chosen fillings over one half
+              of the omelette
             </li>
             <li className="my-2 pl-2.5">
-              <strong>Fold and serve</strong>: As the omelette continues to
-              cook, carefully lift one edge and fold it over the fillings. Let
-              it cook for another minute, then slide it onto a plate.
+              <strong className="text-black">Fold and serve</strong>: As the
+              omelette continues to cook, carefully lift one edge and fold it
+              over the fillings. Let it cook for another minute, then slide it
+              onto a plate.
             </li>
             <li className="my-2 pl-2.5">
-              <strong>Enjoy</strong>: Serve hot, with additional salt and pepper
-              if needed.
+              <strong className="text-black">Enjoy</strong>: Serve hot, with
+              additional salt and pepper if needed.
             </li>
           </ol>
         </div>
+        <h1 className="font-youngserif text-3xl text-(--secondary-color) box-border my-5">
+          Nutrition
+        </h1>
+        <p className="text-(--gray-color) font-outfit mb-5">
+          This table shows nutritional values per serving without the additional
+          fillings
+        </p>
+        <table>
+          <tr className="border-b-2 border-gray-400 text-2xl font-outfit">
+            <td className="text-(--gray-color) p-3">Calories</td>
+            <td className="text-(--secondary-color) font-bold">277kcal</td>
+          </tr>
+          <tr className="border-b-2 border-gray-400 text-2xl font-outfit">
+            <td className="text-(--gray-color) p-3">Carbs</td>
+            <td className="text-(--secondary-color) font-bold">0g</td>
+          </tr>
+          <tr className="border-b-2 border-gray-400 text-2xl font-outfit">
+            <td className="text-(--gray-color) p-3">Protein</td>
+            <td className="text-(--secondary-color) font-bold">20g</td>
+          </tr>
+          <tr className="border-b-2 border-gray-400 text-2xl font-outfit">
+            <td className="text-(--gray-color) p-3">Fat</td>
+            <td className="text-(--secondary-color) font-bold">22g</td>
+          </tr>
+        </table>
       </div>
     </div>
   );

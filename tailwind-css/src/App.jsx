@@ -16,14 +16,28 @@ function App() {
             Preparation Time
           </h1>
           <ul className="list-disc ml-7 marker:text-(--primary-color) box-border">
-            <li>
+            <li className="my-2">
               <span className="font-bold">Total: </span>Approximately 10 minutes
             </li>
-            <li>
+            <li className="my-2">
               <span className="font-bold">Preparation: </span>5 minutes
             </li>
-            <li>
+            <li className="my-2">
               <span className="font-bold">Cooking: </span>5 minutes
+            </li>
+          </ul>
+        </div>
+        <div className="border-b-2 border-gray-400 py-7 box-border">
+          <h1 className="text-(--secondary-color) text-3xl font-youngserif">
+            Ingredients
+          </h1>
+          <ul className="box-border pl-9 list-disc marker:text-(--secondary-color)">
+            <li className="my-2 pl-2.5">2-3 large eggs</li>
+            <li className="my-2 pl-2.5">Salt, to taste</li>
+            <li className="my-2 pl-2.5">Pepper, to taste</li>
+            <li className="my-2 pl-2.5">1 tablespoon of buttor or oil</li>
+            <li className="my-2 pl-2.5">
+              Optional fillings: cheese, diced vegetables, cooked meats, herbs
             </li>
           </ul>
         </div>

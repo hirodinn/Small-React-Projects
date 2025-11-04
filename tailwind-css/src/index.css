@@ -16,3 +16,7 @@
   --font-outfit: "Outfit", sans-serif;
   --font-youngserif: "YoungSerif", sans-serif;
 }
+
+:root {
+  --primary-background: #f3e5d8;
+}

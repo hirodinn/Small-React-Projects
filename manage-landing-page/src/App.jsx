@@ -195,6 +195,21 @@ function App() {
             Privacy Policy
           </p>
         </div>
+        <div className="flex flex-col text-center">
+          <form>
+            <input
+              type="text"
+              placeholder="updates in your box..."
+              className="bg-white border-my-orange border-2 rounded-full min-h-full pl-5 mr-3 focus:outline-0"
+            />
+            <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover">
+              Go
+            </button>
+          </form>
+          <p className="text-gray-500 mt-20">
+            Copy right 2025. All Right Reserved.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className=" flex flex-col py-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden">
+    <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden">
       <header className=" h-20 flex justify-between items-center border-2 max overflow-hidden box-border w-[90%] max-w-[1370px] mx-auto">
         <img src="images/logo.svg" className="cursor-pointer" />
         <ul className="md:flex items-center justify-center hidden">
@@ -152,6 +152,21 @@ function App() {
         <button className="rounded-[30px] cursor-pointer text-my-orange bg-white px-5 py-2.5 hover:text-my-orange-hover ">
           Get Started
         </button>
+      </div>
+      <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex">
+        <div className="flex flex-col">
+          <img src="images/logo.svg" className="cursor-pointer" />
+          <ul className="flex w-full justify-between">
+            <li className="cursor-pointer"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   );

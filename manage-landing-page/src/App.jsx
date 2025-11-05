@@ -156,12 +156,22 @@ function App() {
       <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex">
         <div className="flex flex-col">
           <img src="images/logo.svg" className="cursor-pointer" />
-          <ul className="flex w-full justify-between">
-            <li className="cursor-pointer"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul className="flex w-full mt-20">
+            <li className="cursor-pointer mx-3">
+              <i class="fab fa-facebook-f text-my-dark hover:bg-my-orange text-2xl bg-white p-1 pb-0"></i>
+            </li>
+            <li className="cursor-pointer mx-3">
+              <i class="fab fa-youtube text-white hover:text-my-orange text-3xl"></i>
+            </li>
+            <li className="cursor-pointer mx-3">
+              <i class="fab fa-twitter text-white hover:text-my-orange text-3xl"></i>
+            </li>
+            <li className="cursor-pointer mx-3">
+              <i class="fab fa-pinterest text-white hover:text-my-orange text-3xl "></i>
+            </li>
+            <li className="cursor-pointer mx-3">
+              <i class="fab fa-instagram text-white hover:text-my-orange text-3xl "></i>
+            </li>
           </ul>
         </div>
         <div></div>

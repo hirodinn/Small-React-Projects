@@ -188,6 +188,13 @@ function App() {
             About Us
           </a>
         </div>
+        <div className="flex flex-col text-center text-white">
+          <p className="cursor-pointer hover:text-my-orange pb-5">Careers</p>
+          <p className="cursor-pointer hover:text-my-orange pb-5">Community</p>
+          <p className="cursor-pointer hover:text-my-orange pb-5">
+            Privacy Policy
+          </p>
+        </div>
       </div>
     </div>
   );

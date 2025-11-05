@@ -153,7 +153,7 @@ function App() {
           Get Started
         </button>
       </div>
-      <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex">
+      <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex justify-between">
         <div className="flex flex-col">
           <img src="images/logo.svg" className="cursor-pointer" />
           <ul className="flex w-full mt-20">
@@ -174,9 +174,20 @@ function App() {
             </li>
           </ul>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="flex flex-col text-white justify-between min-h-full text-center">
+          <a href="#" className="hover:text-my-orange cursor-pointer">
+            Home
+          </a>
+          <a href="#" className="hover:text-my-orange cursor-pointer">
+            Pricing
+          </a>
+          <a href="#" className="hover:text-my-orange cursor-pointer">
+            Products
+          </a>
+          <a href="#" className="hover:text-my-orange cursor-pointer">
+            About Us
+          </a>
+        </div>
       </div>
     </div>
   );

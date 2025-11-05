@@ -153,10 +153,13 @@ function App() {
           Get Started
         </button>
       </div>
-      <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex justify-between">
-        <div className="flex flex-col">
-          <img src="images/logo.svg" className="cursor-pointer" />
-          <ul className="flex w-full mt-20">
+      <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex lg:justify-between flex-col-reverse lg:flex-row">
+        <p className="text-gray-500 mt-20 lg:hidden text-center">
+          Copy right 2025. All Right Reserved.
+        </p>
+        <div className="flex flex-col items-center">
+          <img src="images/logo.svg" className="cursor-pointer w-70" />
+          <ul className="flex w-full mt-5 justify-center lg:mt-20">
             <li className="cursor-pointer mx-3">
               <i class="fab fa-facebook-f text-my-dark hover:bg-my-orange text-2xl bg-white p-1 pb-0"></i>
             </li>
@@ -174,29 +177,33 @@ function App() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col text-white justify-between min-h-full text-center">
-          <a href="#" className="hover:text-my-orange cursor-pointer">
-            Home
-          </a>
-          <a href="#" className="hover:text-my-orange cursor-pointer">
-            Pricing
-          </a>
-          <a href="#" className="hover:text-my-orange cursor-pointer">
-            Products
-          </a>
-          <a href="#" className="hover:text-my-orange cursor-pointer">
-            About Us
-          </a>
-        </div>
-        <div className="flex flex-col text-center text-white">
-          <p className="cursor-pointer hover:text-my-orange pb-5">Careers</p>
-          <p className="cursor-pointer hover:text-my-orange pb-5">Community</p>
-          <p className="cursor-pointer hover:text-my-orange pb-5">
-            Privacy Policy
-          </p>
+        <div className="flex flex-1 justify-around my-11 lg:my-0">
+          <div className="flex flex-col text-white justify-between min-h-full text-center">
+            <a href="#" className="hover:text-my-orange cursor-pointer">
+              Home
+            </a>
+            <a href="#" className="hover:text-my-orange cursor-pointer">
+              Pricing
+            </a>
+            <a href="#" className="hover:text-my-orange cursor-pointer">
+              Products
+            </a>
+            <a href="#" className="hover:text-my-orange cursor-pointer">
+              About Us
+            </a>
+          </div>
+          <div className="flex flex-col text-center text-white">
+            <p className="cursor-pointer hover:text-my-orange pb-5">Careers</p>
+            <p className="cursor-pointer hover:text-my-orange pb-5">
+              Community
+            </p>
+            <p className="cursor-pointer hover:text-my-orange pb-5">
+              Privacy Policy
+            </p>
+          </div>
         </div>
         <div className="flex flex-col text-center">
-          <form>
+          <form className="h-12">
             <input
               type="text"
               placeholder="updates in your box..."
@@ -206,7 +213,7 @@ function App() {
               Go
             </button>
           </form>
-          <p className="text-gray-500 mt-20">
+          <p className="text-gray-500 mt-20 hidden lg:block">
             Copy right 2025. All Right Reserved.
           </p>
         </div>

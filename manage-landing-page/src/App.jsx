@@ -46,53 +46,55 @@ function App() {
           </p>
         </div>
         <div className="flex-1 px-6">
-          <div className="flex items-start gap-4 mb-4">
-            <div className="text-white bg-my-orange px-8 py-2.5 rounded-3xl">
-              01
-            </div>
-            <div>
-              <h2 className="font-bold text-3xl text-my-blue mb-3">
+          <div className="flex flex-col items-start mb-4">
+            <div className="flex lg:bg-transparent bg-my-pink w-full rounded-3xl">
+              <p className=" text-white bg-my-orange w-[86px] py-2.5 rounded-3xl inline-flex items-center justify-center">
+                01
+              </p>
+              <p className="font-bold text-2xl text-my-blue ml-3.5 mt-1.5">
                 Track company-wide progress
-              </h2>
-              <p className="text-2xl text-gray-500">
-                See how your day-to-day tasks fit into the wider vision. Go from
-                tracking progress at the milestone level all the way down to the
-                smallest of details. Never lose sight of the bigger picture
-                again.
               </p>
             </div>
+            <p className="text-2xl text-gray-500 lg:ml-[100px] leading-10 mt-5">
+              See how your day-to-day tasks fit into the wider vision. Go from
+              tracking progress at the milestone level all the way down to the
+              smallest of details. Never lose sight of the bigger picture again.
+            </p>
           </div>
-          <div className="flex items-start gap-4 mb-4">
-            <div className="text-white bg-my-orange px-8 py-2.5 rounded-3xl">
-              02
-            </div>
-            <div>
-              <h2 className="font-bold text-3xl text-my-blue mb-3">
+          <div className="flex flex-col items-start mb-4">
+            <div className="flex lg:bg-transparent bg-my-pink w-full rounded-3xl">
+              <p className=" text-white bg-my-orange w-[86px] py-2.5 rounded-3xl inline-flex items-center justify-center">
+                02
+              </p>
+              <p className="font-bold text-2xl text-my-blue ml-3.5 mt-1.5">
                 Advanced built-in reports
-              </h2>
-              <p className="text-2xl text-gray-500">
-                Set internal delivery estimates and track progress toward
-                company goals. Our customisable dashboard helps you build out
-                the reports you need to keep key stakeholders informed.
               </p>
             </div>
+            <p className="text-2xl text-gray-500 lg:ml-[100px] leading-10 mt-5">
+              Set internal delivery estimates and track progress toward company
+              goals. Our customisable dashboard helps you build out the reports
+              you need to keep key stakeholders informed.
+            </p>
           </div>
-          <div className="flex items-start gap-4 mb-4">
-            <div className="text-white bg-my-orange px-8 py-2.5 rounded-3xl">
-              03
-            </div>
-            <div>
-              <h2 className="font-bold text-3xl text-my-blue mb-3">
+          <div className="flex flex-col items-start mb-4">
+            <div className="flex lg:bg-transparent bg-my-pink w-full rounded-3xl">
+              <p className=" text-white bg-my-orange w-[86px] py-2.5 rounded-3xl inline-flex items-center justify-center">
+                03
+              </p>
+              <p className="font-bold text-2xl text-my-blue ml-3.5 mt-1.5">
                 Everything you need in one place
-              </h2>
-              <p className="text-2xl text-gray-500">
-                Stop jumping from one service to another to communicate, store
-                files, track tasks and share documents. Manage offers an
-                all-in-one team productivity solution.
               </p>
             </div>
+            <p className="text-2xl text-gray-500 lg:ml-[100px] leading-10 mt-5">
+              Stop jumping from one service to another to communicate, store
+              files, track tasks and share documents. Manage offers an
+              all-in-one team productivity solution.
+            </p>
           </div>
         </div>
+      </div>
+      <div className="flex flex-col">
+        <h1>What they've said</h1>
       </div>
     </div>
   );

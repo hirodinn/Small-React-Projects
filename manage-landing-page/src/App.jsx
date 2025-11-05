@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className=" flex flex-col py-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 px-5 xl:px-40">
-      <header className="w-full h-20 mx-auto flex justify-between items-center border-2">
+    <div className=" flex flex-col py-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 px-5 xl:px-40 box-border overflow-hidden">
+      <header className="w-full h-20 mx-auto flex justify-between items-center border-2 max overflow-hidden">
         <img src="images/logo.svg" className="cursor-pointer" />
         <ul className="md:flex items-center justify-center hidden">
           <li className="pr-8 cursor-pointer hover:text-gray-500">Pricing</li>
@@ -93,8 +93,51 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col">
-        <h1>What they've said</h1>
+      <div className="flex flex-col items-center mt-30">
+        <h1 className="text-5xl text-my-blue font-bold mb-24">
+          What they've said
+        </h1>
+        <div className="flex mb-8 gap-7">
+          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center">
+            <img
+              src="images/avatar-anisha.png"
+              className="w-[50px] absolute top-[-25px] left-[50%] translate-x-[-25px]"
+            />
+            <p className="text-2xl font-bold my-4">Anisha Li</p>
+            <p>
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center">
+            <img
+              src="images/avatar-anisha.png"
+              className="w-[50px] absolute top-[-25px] left-[50%] translate-x-[-25px]"
+            />
+            <p className="text-2xl font-bold my-4">Anisha Li</p>
+            <p>
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center">
+            <img
+              src="images/avatar-anisha.png"
+              className="w-[50px] absolute top-[-25px] left-[50%] translate-x-[-25px]"
+            />
+            <p className="text-2xl font-bold my-4">Anisha Li</p>
+            <p>
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+        </div>
+        <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover">
+          Get Started
+        </button>
       </div>
     </div>
   );

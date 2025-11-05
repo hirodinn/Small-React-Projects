@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className=" flex flex-col py-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 px-5 xl:px-40 box-border overflow-hidden">
-      <header className="w-full h-20 mx-auto flex justify-between items-center border-2 max overflow-hidden">
+    <div className=" flex flex-col py-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden">
+      <header className=" h-20 flex justify-between items-center border-2 max overflow-hidden box-border w-[90%] max-w-[1370px] mx-auto">
         <img src="images/logo.svg" className="cursor-pointer" />
         <ul className="md:flex items-center justify-center hidden">
           <li className="pr-8 cursor-pointer hover:text-gray-500">Pricing</li>
@@ -18,7 +18,7 @@ function App() {
           Get Started
         </button>
       </header>
-      <div className="flex gap-[10%] flex-col-reverse lg:flex-row mt-30 border-2">
+      <div className="flex gap-[10%] flex-col-reverse lg:flex-row mt-30 border-2 w-[90%] max-w-[1370px] box-border mx-auto">
         <div className="flex-1 py-8 flex flex-col items-center lg:items-start text-center lg:text-start justify-around">
           <h1 className="text-7xl text-my-blue font-bold">
             Bring everyone together to build better products
@@ -35,7 +35,7 @@ function App() {
           <img src="public/images/illustration-intro.svg" className="h-fit" />
         </div>
       </div>
-      <div className="flex flex-col gap-5 lg:flex-row mt-30 border-2">
+      <div className="flex flex-col gap-5 lg:flex-row mt-30 border-2 w-[90%] max-w-[1370px] mx-auto box-border">
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-start mb-10 lg:mb-0">
           <h1 className="text-5xl text-my-blue font-bold max-w-[80%] mb-5">
             What's different about Manage?
@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center mt-30">
+      <div className="flex flex-col items-center mt-30  box-border">
         <h1 className="text-5xl text-my-blue font-bold mb-24">
           What they've said
         </h1>
@@ -142,6 +142,14 @@ function App() {
           <i className="fa-regular fa-circle text-my-orange mx-1.5"></i>
         </div>
         <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover">
+          Get Started
+        </button>
+      </div>
+      <div className="bg-my-orange flex flex-col lg:flex-row mt-30 justify-between  lg:px-40 p-10 box-border w-full items-center">
+        <h1 className="text-white text-5xl flex-1 lg:max-w-[40%] max-w-[70%] mb-12 lg:mb-0 text-center lg:text-start">
+          Simplify how your team works today.
+        </h1>
+        <button className="rounded-[30px] cursor-pointer text-my-orange bg-white px-5 py-2.5 hover:text-my-orange-hover ">
           Get Started
         </button>
       </div>

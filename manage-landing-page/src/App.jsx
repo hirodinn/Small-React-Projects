@@ -97,7 +97,7 @@ function App() {
         <h1 className="text-5xl text-my-blue font-bold mb-24">
           What they've said
         </h1>
-        <div className="flex mb-8 gap-7">
+        <div className="flex gap-7 lg:mb-8">
           <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center sm:hidden lg:block">
             <img
               src="images/avatar-anisha.png"
@@ -134,6 +134,12 @@ function App() {
               I talk to!”
             </p>
           </div>
+        </div>
+        <div className=" lg:hidden mt-1 mb-6">
+          <i className="fa-regular fa-circle text-my-orange mx-1.5"></i>
+          <i className="fa-regular fa-circle text-my-orange mx-1.5"></i>
+          <i className="fa-regular fa-circle text-my-orange bg-my-orange rounded-[50%] mx-1.5"></i>
+          <i className="fa-regular fa-circle text-my-orange mx-1.5"></i>
         </div>
         <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover">
           Get Started

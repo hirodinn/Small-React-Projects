@@ -98,7 +98,7 @@ function App() {
           What they've said
         </h1>
         <div className="flex mb-8 gap-7">
-          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center">
+          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center sm:hidden lg:block">
             <img
               src="images/avatar-anisha.png"
               className="w-[50px] absolute top-[-25px] left-[50%] translate-x-[-25px]"
@@ -112,26 +112,26 @@ function App() {
           </div>
           <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center">
             <img
-              src="images/avatar-anisha.png"
+              src="images/avatar-ali.png"
               className="w-[50px] absolute top-[-25px] left-[50%] translate-x-[-25px]"
             />
-            <p className="text-2xl font-bold my-4">Anisha Li</p>
+            <p className="text-2xl font-bold my-4">Ali Bravo</p>
             <p>
-              “Manage has supercharged our team’s workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
+              “We have been able to cancel so many other subscriptions since
+              using Manage. There is no more cross-channel confusion and
+              everyone is much more focused.”
             </p>
           </div>
-          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center">
+          <div className="flex flex-col w-[600px] bg-box-gray relative p-8 text-center sm:hidden lg:block">
             <img
-              src="images/avatar-anisha.png"
+              src="images/avatar-richard.png"
               className="w-[50px] absolute top-[-25px] left-[50%] translate-x-[-25px]"
             />
-            <p className="text-2xl font-bold my-4">Anisha Li</p>
+            <p className="text-2xl font-bold my-4">Richard Watts</p>
             <p>
-              “Manage has supercharged our team’s workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
+              “Manage allows us to provide structure and process. It keeps us
+              organized and focused. I can’t stop recommending them to everyone
+              I talk to!”
             </p>
           </div>
         </div>

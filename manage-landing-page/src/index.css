@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@theme {
+  --color-my-orange: #ff4c22;
+  --color-my-blue: #2a2453;
+  --color-my-orange-hover: #ff876d;
+}

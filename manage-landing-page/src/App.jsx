@@ -3,16 +3,26 @@ function App() {
     <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden relative">
       <img
         src="images/bg-tablet-pattern.svg"
-        className="absolute z-[-1] right-[-100px] box-border overflow-hidden top-[-100px]"
+        className="absolute z-[-1] right-[-100px] box-border overflow-hidden top-[-100px] max-w-[800px]"
       />
-      <header className=" h-20 flex justify-between items-center border-2 max overflow-hidden box-border w-[90%] max-w-[1370px] mx-auto">
+      <header className=" h-20 flex justify-between items-center max overflow-hidden box-border w-[90%] max-w-[1370px] mx-auto whitespace-nowrap md:w-[96%] lg:w-[90%]">
         <img src="images/logo.svg" className="cursor-pointer" />
-        <ul className="md:flex items-center justify-center hidden">
-          <li className="pr-8 cursor-pointer hover:text-gray-500">Pricing</li>
-          <li className="pr-8 cursor-pointer hover:text-gray-500">Product</li>
-          <li className="pr-8 cursor-pointer hover:text-gray-500">About Us</li>
-          <li className="pr-8 cursor-pointer hover:text-gray-500">Careers</li>
-          <li className="pr-8 cursor-pointer hover:text-gray-500">Community</li>
+        <ul className="md:flex items-center justify-center hidden ml-8 lg:ml-8 sm:ml-6">
+          <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
+            Pricing
+          </li>
+          <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
+            Product
+          </li>
+          <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
+            About Us
+          </li>
+          <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
+            Careers
+          </li>
+          <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
+            Community
+          </li>
         </ul>
         <img
           src="images/icon-hamburger.svg"
@@ -22,7 +32,7 @@ function App() {
           Get Started
         </button>
       </header>
-      <div className="flex gap-[10%] flex-col-reverse lg:flex-row mt-30 border-2 w-[90%] max-w-[1370px] box-border mx-auto">
+      <div className="flex gap-[10%] flex-col-reverse lg:flex-row mt-30 w-[90%] max-w-[1370px] box-border mx-auto">
         <div className="flex-1 py-8 flex flex-col items-center lg:items-start text-center lg:text-start justify-around">
           <h1 className="text-7xl text-my-blue font-bold">
             Bring everyone together to build better products
@@ -39,7 +49,7 @@ function App() {
           <img src="public/images/illustration-intro.svg" className="h-fit" />
         </div>
       </div>
-      <div className="flex flex-col gap-5 lg:flex-row mt-30 border-2 w-[90%] max-w-[1370px] mx-auto box-border">
+      <div className="flex flex-col gap-5 lg:flex-row mt-30 w-[90%] max-w-[1370px] mx-auto box-border">
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-start mb-10 lg:mb-0">
           <h1 className="text-5xl text-my-blue font-bold max-w-[80%] mb-5">
             What's different about Manage?
@@ -232,7 +242,7 @@ function App() {
       </footer>
       <img
         src="images/bg-tablet-pattern.svg"
-        className="absolute z-[-1] right-[-200px] max-w-[450px] bottom-[3000px] lg:left-[-300px] box-border lg:bottom-[700px] lg:max-w-none"
+        className="absolute z-[-1] right-[-200px] max-w-[450px] top-[700px] lg:left-[-200px] box-border lg:top-[1200px] lg:max-w-[800px] "
       />
     </div>
   );

@@ -10,12 +10,15 @@
   font-family: "Outfit", sans-serif;
   border: none;
 }
-body {
+.body {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .container {
   width: 600px;

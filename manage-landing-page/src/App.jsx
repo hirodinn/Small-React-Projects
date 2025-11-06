@@ -149,13 +149,21 @@ function App() {
           Get Started
         </button>
       </div>
-      <div className="bg-my-orange flex flex-col lg:flex-row mt-30 justify-between  lg:px-40 p-10 box-border w-full items-center">
+      <div className="bg-my-orange flex flex-col lg:flex-row mt-30 justify-between  lg:px-40 p-10 box-border w-full items-center relative overflow-hidden">
         <h1 className="text-white text-5xl flex-1 lg:max-w-[40%] max-w-[70%] mb-12 lg:mb-0 text-center lg:text-start">
           Simplify how your team works today.
         </h1>
         <button className="rounded-[30px] cursor-pointer text-my-orange bg-white px-5 py-2.5 hover:text-my-orange-hover ">
           Get Started
         </button>
+        <img
+          src="images/bg-simplify-section-desktop.svg"
+          className="absolute left-70 bottom-1 hidden lg:block"
+        />
+        <img
+          src="images/bg-simplify-section-mobile.svg"
+          className="lg:hidden absolute left-0"
+        />
       </div>
       <footer className="bg-my-dark w-full lg:px-40 p-10 box-border flex lg:justify-between flex-col-reverse lg:flex-row">
         <p className="text-gray-500 mt-20 lg:hidden text-center">
@@ -224,7 +232,7 @@ function App() {
       </footer>
       <img
         src="images/bg-tablet-pattern.svg"
-        className="absolute z-[-1] right-[-200px] max-w-[450px] bottom-[3000px] lg:left-[-300px] box-border overflow-hidden lg:bottom-[700px] lg:max-w-none"
+        className="absolute z-[-1] right-[-200px] max-w-[450px] bottom-[3000px] lg:left-[-300px] box-border lg:bottom-[700px] lg:max-w-none"
       />
     </div>
   );

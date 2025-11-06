@@ -6,6 +6,7 @@ export default function App() {
   const [weatherDetails, setWeatherDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [successful, setSuccessful] = useState(true);
+  const [bg, setBg] = useState("");
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   async function loadData() {
     try {
@@ -17,6 +18,9 @@ export default function App() {
       );
       setWeatherDetails(response.data);
       setSuccessful(true);
+      setBackground(response.data.weather[0].main.toLowerCase());
+      setInputValue("");
+      console.log(response.data.weather[0].main.toLowerCase());
     } catch (error) {
       console.error("Error fetching weather:", error);
       setSuccessful(false);
@@ -28,8 +32,59 @@ export default function App() {
     loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  function setBackground(weather) {
+    switch (weather) {
+      case "clear":
+        setBg("url('clear.jpg')");
+        break;
+      case "clouds":
+        setBg("url('cloud.jpg')");
+        break;
+      case "rain":
+        setBg("url('rain.jpg')");
+        break;
+      case "drizzle":
+        setBg("url('rain.jpg')");
+        break;
+      case "thunderstorm":
+        setBg("url('thunderstorm.jpg')");
+        break;
+      case "snow":
+        setBg("url('snow.jpg')");
+        break;
+      case "mist":
+        setBg("url(mist.jpg)");
+        break;
+      case "fog":
+        setBg("url(fog.jpg)");
+        break;
+      case "haze":
+        setBg("url(haze.jpg)");
+        break;
+      case "smoke":
+        setBg("url('fog.jpg')");
+        break;
+      case "dust":
+        setBg("url(dust.jpg)");
+        break;
+      case "sand":
+        setBg("url(dust.jpg)");
+        break;
+      case "ash":
+        setBg("url('ash.jpg')");
+        break;
+      case "tornado":
+        setBg("url(tornado.jpg)");
+        break;
+      case "squall":
+        setBg("url('wind.jpg')");
+        break;
+    }
+  }
+
   return (
-    <div className="body" style={{ backgroundImage: "url(fog.jpg)" }}>
+    <div className="body" style={{ backgroundImage: bg }}>
       <div className="container">
         {weatherDetails &&
           (isLoading ? (

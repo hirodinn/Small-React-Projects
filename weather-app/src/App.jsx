@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
 export default function App() {
   const [inputValue, setInputValue] = useState("");
+  const inputRef = useRef(null);
   const [weatherDetails, setWeatherDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [successful, setSuccessful] = useState(true);
@@ -20,6 +21,9 @@ export default function App() {
       setSuccessful(true);
       setBackground(response.data.weather[0].main.toLowerCase());
       setInputValue("");
+      setTimeout(() => {
+        inputRef?.current?.focus();
+      }, 100);
       console.log(response.data.weather[0].main.toLowerCase());
     } catch (error) {
       console.error("Error fetching weather:", error);
@@ -103,6 +107,7 @@ export default function App() {
                     setInputValue(e.target.value);
                     setSuccessful(true);
                   }}
+                  ref={inputRef}
                 />
                 <button onClick={loadData}>Search</button>
               </form>

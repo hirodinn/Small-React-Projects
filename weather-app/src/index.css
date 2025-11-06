@@ -19,6 +19,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: all 1s ease-in-out;
 }
 .container {
   width: 550px;

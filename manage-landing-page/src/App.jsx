@@ -1,6 +1,10 @@
 function App() {
   return (
-    <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden">
+    <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden relative">
+      <img
+        src="images/bg-tablet-pattern.svg"
+        className="absolute z-[-1] right-[-100px] box-border overflow-hidden top-[-100px]"
+      />
       <header className=" h-20 flex justify-between items-center border-2 max overflow-hidden box-border w-[90%] max-w-[1370px] mx-auto">
         <img src="images/logo.svg" className="cursor-pointer" />
         <ul className="md:flex items-center justify-center hidden">
@@ -153,7 +157,7 @@ function App() {
           Get Started
         </button>
       </div>
-      <div className="bg-my-dark w-full lg:px-40 p-10 box-border flex lg:justify-between flex-col-reverse lg:flex-row">
+      <footer className="bg-my-dark w-full lg:px-40 p-10 box-border flex lg:justify-between flex-col-reverse lg:flex-row">
         <p className="text-gray-500 mt-20 lg:hidden text-center">
           Copy right 2025. All Right Reserved.
         </p>
@@ -217,7 +221,11 @@ function App() {
             Copy right 2025. All Right Reserved.
           </p>
         </div>
-      </div>
+      </footer>
+      <img
+        src="images/bg-tablet-pattern.svg"
+        className="absolute z-[-1] right-[-200px] max-w-[450px] bottom-[3000px] lg:left-[-300px] box-border overflow-hidden lg:bottom-[700px] lg:max-w-none"
+      />
     </div>
   );
 }

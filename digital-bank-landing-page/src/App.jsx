@@ -83,6 +83,63 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 py-8">
+        <h1 className="mb-8">Latest Articles</h1>
+        <div className="flex gap-4 text-gray-500 flex-wrap justify-evenly">
+          <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
+            <img src="images/image-currency.jpg" />
+            <div className="px-6 py-8">
+              <p>By Claire Robinson</p>
+              <p className="font-bold text-gray-600 my-2 text-[19px]">
+                Receive money in any currency with no fees
+              </p>
+              <p>
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single ...
+              </p>
+            </div>
+          </div>
+          <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
+            <img src="images/image-currency.jpg" />
+            <div className="px-6 py-8">
+              <p>By Claire Robinson</p>
+              <p className="font-bold text-gray-600 my-2 text-[19px]">
+                Receive money in any currency with no fees
+              </p>
+              <p>
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single ...
+              </p>
+            </div>
+          </div>
+          <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
+            <img src="images/image-currency.jpg" />
+            <div className="px-6 py-8">
+              <p>By Claire Robinson</p>
+              <p className="font-bold text-gray-600 my-2 text-[19px]">
+                Receive money in any currency with no fees
+              </p>
+              <p>
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single ...
+              </p>
+            </div>
+          </div>
+          <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
+            <img src="images/image-currency.jpg" />
+            <div className="px-6 py-8">
+              <p>By Claire Robinson</p>
+              <p className="font-bold text-gray-600 my-2 text-[19px]">
+                Receive money in any currency with no fees
+              </p>
+              <p>
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single ...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

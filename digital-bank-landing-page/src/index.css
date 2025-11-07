@@ -10,4 +10,11 @@
   --font-outfit: "Outfit", sans-serif;
   --color-gradient-first: #00bdcc;
   --color-gradient-second: #00e46a;
+  --color-my-light-gray: #fafafa;
+  --color-my-gray: #f3f5f7;
+}
+@layer components {
+  .request {
+    @apply py-3 px-7 rounded-4xl text-white bg-linear-[45deg] from-gradient-first to-gradient-second cursor-pointer;
+  }
 }

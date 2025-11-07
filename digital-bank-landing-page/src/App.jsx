@@ -83,8 +83,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 py-8">
-        <h1 className="mb-8">Latest Articles</h1>
+      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15">
+        <h1 className="lg:mb-25 mb-15 text-6xl text-my-blue text-center lg:text-start">
+          Latest Articles
+        </h1>
         <div className="flex gap-4 text-gray-500 flex-wrap justify-evenly">
           <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
             <img src="images/image-currency.jpg" />

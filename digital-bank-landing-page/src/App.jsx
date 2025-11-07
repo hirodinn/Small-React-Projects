@@ -155,6 +155,30 @@ function App() {
           </div>
         </div>
       </div>
+      <footer className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-10 flex flex-col lg:flex-row h-[170px] text-white">
+        <div className="h-100% flex flex-col justify-around">
+          <img src="images/logo-light.svg" />
+          <div className="flex justify-between">
+            <img src="images/icon-facebook.svg" />
+            <img src="images/icon-youtube.svg" />
+            <img src="images/icon-twitter.svg" />
+            <img src="images/icon-pinterest.svg" />
+            <img src="images/icon-instagram.svg" />
+          </div>
+        </div>
+        <div className="flex flex-col flex-wrap text-[18px] h-full flex-1">
+          <p className="mx-auto mb-2 cursor-pointer">About</p>
+          <p className="mx-auto mb-2 cursor-pointer">Contact</p>
+          <p className="mx-auto mb-2 cursor-pointer">Blog</p>
+          <p className="mx-auto mb-2 cursor-pointer">Careers</p>
+          <p className="mx-auto mb-2 cursor-pointer">Support</p>
+          <p className="mx-auto mb-2 cursor-pointer">Privacy</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <button className="request">Request invite</button>
+          <p className="text-gray-500">@Digitalbank. All Rights Reserved</p>
+        </div>
+      </footer>
     </div>
   );
 }

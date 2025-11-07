@@ -12,6 +12,7 @@
   --color-gradient-second: #00e46a;
   --color-my-light-gray: #fafafa;
   --color-my-blue: #30284d;
+  --color-my-blue-background: #31294e;
   --color-my-gray: #f3f5f7;
 }
 @layer components {

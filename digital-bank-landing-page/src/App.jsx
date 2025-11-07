@@ -1,8 +1,8 @@
 function App() {
   return (
     <div className="w-full h-screen box-border bg-cyan-100 font-outfit">
-      <header className="w-full box-border mx-auto h-23 px-10 flex justify-between xl:px-25 lg:px-40  bg-white py-8 items-center">
-        <img src="images/logo-dark.svg" />
+      <header className="w-full box-border mx-auto h-23 px-10 flex justify-between 2xl:40 xl:px-35 lg:px-25  bg-white py-8 items-center">
+        <img src="images/logo-dark.svg" className="cursor-pointer" />
         <ul className="text-[19px] hidden lg:flex">
           <li className="text-gray-500 cursor-pointer mr-6">Home</li>
           <li className="text-gray-500 cursor-pointer mr-6">About</li>

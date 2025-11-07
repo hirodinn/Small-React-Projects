@@ -30,6 +30,47 @@ function App() {
           className="absolute max-w-[600px] right-[50%] translate-x-[50%] lg:translate-x-0 lg:right-0  top-[-100px] lg:max-w-[50%] lg:bg-[url(images/bg-intro-desktop.svg)] bg-[url(images/bg-intro-mobile.svg)] bg-no-repeat bg-size-[100%]"
         />
       </div>
+      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30">
+        <h1 className="text-6xl">Why choose Digitalbank?</h1>
+        <p className="my-10 max-w-[45%]">
+          we leverage Open Banking to turn your bank account into your financial
+          hub, Control your finances like never before
+        </p>
+        <div className="flex justify-between ">
+          <div className="flex-1 mr-6">
+            <img src="images/icon-online.svg" className="rounded-full" />
+            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p>
+              Our modern web and mobile applications allow you to keep track of
+              your finances wherever you are in the world.
+            </p>
+          </div>
+          <div className="flex-1 mr-6">
+            <img src="images/icon-online.svg" className="rounded-full" />
+            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p>
+              Our modern web and mobile applications allow you to keep track of
+              your finances wherever you are in the world.
+            </p>
+          </div>
+          <div className="flex-1 mr-6">
+            <img src="images/icon-online.svg" className="rounded-full" />
+            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p>
+              Our modern web and mobile applications allow you to keep track of
+              your finances wherever you are in the world.
+            </p>
+          </div>
+          <div className="flex-1">
+            <img src="images/icon-online.svg" className="rounded-full" />
+            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p>
+              Our modern web and mobile applications allow you to keep track of
+              your finances wherever you are in the world.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

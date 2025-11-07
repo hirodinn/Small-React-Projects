@@ -13,7 +13,7 @@ function App() {
         <button className="hidden lg:block request">Request invite</button>
         <img src="images/icon-hamburger.svg" className="lg:hidden" />
       </header>
-      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray lg:justify-center relative w-full h-[115vh] lg:h-[90vh] justify-start">
+      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray lg:justify-center relative w-full h-[115vh] lg:h-[90vh] justify-start px-10">
         <div className="px-7 lg:px-0 text-center lg:text-start lg:w-[50%] box-border">
           <p className="text-7xl  lg:max-w-[80%] text-my-blue">
             Next generation digital banking
@@ -30,7 +30,7 @@ function App() {
           className="absolute max-w-[600px] right-[50%] translate-x-[50%] lg:translate-x-0 lg:right-0  top-[-100px] lg:max-w-[50%] lg:bg-[url(images/bg-intro-desktop.svg)] bg-[url(images/bg-intro-mobile.svg)] bg-no-repeat bg-size-[100%]"
         />
       </div>
-      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center lg:text-start">
+      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center lg:text-start px-10">
         <h1 className="text-6xl text-my-blue">Why choose Digitalbank?</h1>
         <p className="my-10 max-w-[70%] lg:max-w-[45%] mx-auto lg:ml-0 text-[19px]">
           We leverage Open Banking to turn your bank account into your financial
@@ -83,13 +83,16 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15">
+      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15 px-10">
         <h1 className="lg:mb-25 mb-15 text-6xl text-my-blue text-center lg:text-start">
           Latest Articles
         </h1>
         <div className="flex gap-4 text-gray-500 flex-wrap justify-evenly">
           <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
-            <img src="images/image-currency.jpg" />
+            <img
+              src="images/image-currency.jpg"
+              className="h-[50%]  w-full object-center object-cover"
+            />
             <div className="px-6 py-8">
               <p>By Claire Robinson</p>
               <p className="font-bold text-gray-600 my-2 text-[19px]">
@@ -102,41 +105,51 @@ function App() {
             </div>
           </div>
           <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
-            <img src="images/image-currency.jpg" />
+            <img
+              src="images/image-restaurant.jpg"
+              className="h-[50%]  w-full object-center object-cover"
+            />
             <div className="px-6 py-8">
-              <p>By Claire Robinson</p>
+              <p>By Wilson Hutton</p>
               <p className="font-bold text-gray-600 my-2 text-[19px]">
-                Receive money in any currency with no fees
+                Treat yourself without worrying about money
               </p>
               <p>
-                The world is getting smaller and we’re becoming more mobile. So
-                why should you be forced to only receive money in a single ...
+                Our simple budgeting feature allows you to separate out your
+                spending and set realistic limits each month. That means you ...
               </p>
             </div>
           </div>
           <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
-            <img src="images/image-currency.jpg" />
+            <img
+              src="images/image-plane.jpg"
+              className="h-[50%]  w-full object-center object-cover"
+            />
             <div className="px-6 py-8">
-              <p>By Claire Robinson</p>
+              <p>By Wilson Hutton</p>
               <p className="font-bold text-gray-600 my-2 text-[19px]">
-                Receive money in any currency with no fees
+                Take your Digitalbank card wherever you go
               </p>
               <p>
-                The world is getting smaller and we’re becoming more mobile. So
-                why should you be forced to only receive money in a single ...
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even ...
               </p>
             </div>
           </div>
           <div className="w-[300px] grow bg-white rounded-[10px] overflow-hidden max-w-[450px]">
-            <img src="images/image-currency.jpg" />
+            <img
+              src="images/image-confetti.jpg"
+              className="h-[50%] w-full object-center object-cover"
+            />
             <div className="px-6 py-8">
               <p>By Claire Robinson</p>
               <p className="font-bold text-gray-600 my-2 text-[19px]">
-                Receive money in any currency with no fees
+                Our invite-only Beta accounts are now live!
               </p>
               <p>
-                The world is getting smaller and we’re becoming more mobile. So
-                why should you be forced to only receive money in a single ...
+                After a lot of hard work by the whole team, we’re excited to
+                launch our closed beta. It’s easy to request an invite through
+                ...
               </p>
             </div>
           </div>

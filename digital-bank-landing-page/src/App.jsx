@@ -13,12 +13,12 @@ function App() {
         <button className="hidden lg:block request">Request invite</button>
         <img src="images/icon-hamburger.svg" className="lg:hidden" />
       </header>
-      <div className="flex flex-col 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray justify-center relative h-screen w-full box-border">
-        <div className="max-w-[50%] box-border">
-          <p className="text-7xl  max-w-[70%]">
+      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray justify-center relative h-screen w-full box-border">
+        <div className=" text-center lg:text-start lg:w-[50%] box-border">
+          <p className="text-7xl  lg:max-w-[80%]">
             Next generation digital banking
           </p>
-          <p className="max-w-[70%] my-6">
+          <p className="lg:max-w-[70%] my-6">
             Take your financial life online. Your Digitalbank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
@@ -27,7 +27,7 @@ function App() {
         </div>
         <img
           src="images/image-mockups.png"
-          className="absolute right-0 max-w-[50%]"
+          className="lg:absolute right-0 lg:max-w-[50%]"
         />
       </div>
     </div>

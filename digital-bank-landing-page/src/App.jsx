@@ -155,18 +155,18 @@ function App() {
           </div>
         </div>
       </div>
-      <footer className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-10 flex flex-col lg:flex-row h-[170px] text-white">
-        <div className="h-100% flex flex-col justify-around">
-          <img src="images/logo-light.svg" />
-          <div className="flex justify-between">
-            <img src="images/icon-facebook.svg" />
-            <img src="images/icon-youtube.svg" />
-            <img src="images/icon-twitter.svg" />
-            <img src="images/icon-pinterest.svg" />
-            <img src="images/icon-instagram.svg" />
+      <footer className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-10 flex flex-col lg:flex-row lg:h-[170px] text-white">
+        <div className="lg:h-100% flex flex-col justify-around mx-auto lg:ml-0">
+          <img src="images/logo-light.svg" className="cursor-pointer" />
+          <div className="flex justify-between my-8">
+            <img src="images/icon-facebook.svg" className="cursor-pointer" />
+            <img src="images/icon-youtube.svg" className="cursor-pointer" />
+            <img src="images/icon-twitter.svg" className="cursor-pointer" />
+            <img src="images/icon-pinterest.svg" className="cursor-pointer" />
+            <img src="images/icon-instagram.svg" className="cursor-pointer" />
           </div>
         </div>
-        <div className="flex flex-col flex-wrap text-[18px] h-full flex-1">
+        <div className="flex flex-col flex-wrap text-[18px] h-full flex-1 mb-8 lg:mb-0">
           <p className="mx-auto mb-2 cursor-pointer">About</p>
           <p className="mx-auto mb-2 cursor-pointer">Contact</p>
           <p className="mx-auto mb-2 cursor-pointer">Blog</p>
@@ -175,7 +175,7 @@ function App() {
           <p className="mx-auto mb-2 cursor-pointer">Privacy</p>
         </div>
         <div className="flex flex-col items-center">
-          <button className="request">Request invite</button>
+          <button className="request mb-4">Request invite</button>
           <p className="text-gray-500">@Digitalbank. All Rights Reserved</p>
         </div>
       </footer>

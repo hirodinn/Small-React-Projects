@@ -13,12 +13,12 @@ function App() {
         <button className="hidden lg:block request">Request invite</button>
         <img src="images/icon-hamburger.svg" className="lg:hidden" />
       </header>
-      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray justify-center relative h-screen w-full box-border">
-        <div className=" text-center lg:text-start lg:w-[50%] box-border">
+      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray lg:justify-center relative w-full h-[115vh] lg:h-[90vh] justify-start">
+        <div className="px-7 lg:px-0 text-center lg:text-start lg:w-[50%] box-border">
           <p className="text-7xl  lg:max-w-[80%]">
             Next generation digital banking
           </p>
-          <p className="lg:max-w-[70%] my-6">
+          <p className="lg:max-w-[70%] my-6 text-gray-500">
             Take your financial life online. Your Digitalbank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
@@ -27,7 +27,7 @@ function App() {
         </div>
         <img
           src="images/image-mockups.png"
-          className="lg:absolute right-0 lg:max-w-[50%]"
+          className="absolute max-w-[600px] right-[50%] translate-x-[50%] lg:translate-x-0 lg:right-0  top-[-100px] lg:max-w-[50%] lg:bg-[url(images/bg-intro-desktop.svg)] bg-[url(images/bg-intro-mobile.svg)] bg-no-repeat bg-size-[100%]"
         />
       </div>
     </div>

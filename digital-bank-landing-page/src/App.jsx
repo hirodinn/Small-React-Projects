@@ -30,39 +30,51 @@ function App() {
           className="absolute max-w-[600px] right-[50%] translate-x-[50%] lg:translate-x-0 lg:right-0  top-[-100px] lg:max-w-[50%] lg:bg-[url(images/bg-intro-desktop.svg)] bg-[url(images/bg-intro-mobile.svg)] bg-no-repeat bg-size-[100%]"
         />
       </div>
-      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30">
+      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center lg:text-start">
         <h1 className="text-6xl">Why choose Digitalbank?</h1>
-        <p className="my-10 max-w-[45%]">
+        <p className="my-10 max-w-[70%] lg:max-w-[45%] mx-auto lg:ml-0">
           we leverage Open Banking to turn your bank account into your financial
           hub, Control your finances like never before
         </p>
-        <div className="flex justify-between ">
-          <div className="flex-1 mr-6">
-            <img src="images/icon-online.svg" className="rounded-full" />
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-10">
+          <div className="max-w-[70%] flex-1 mr-6">
+            <img
+              src="images/icon-online.svg"
+              className="rounded-full mx-auto lg:ml-0"
+            />
             <p className="font-bold text-3xl my-3">Online Banking</p>
             <p>
               Our modern web and mobile applications allow you to keep track of
               your finances wherever you are in the world.
             </p>
           </div>
-          <div className="flex-1 mr-6">
-            <img src="images/icon-online.svg" className="rounded-full" />
+          <div className="flex-1 max-w-[70%] mr-6">
+            <img
+              src="images/icon-online.svg"
+              className="rounded-full mx-auto lg:ml-0"
+            />
             <p className="font-bold text-3xl my-3">Online Banking</p>
             <p>
               Our modern web and mobile applications allow you to keep track of
               your finances wherever you are in the world.
             </p>
           </div>
-          <div className="flex-1 mr-6">
-            <img src="images/icon-online.svg" className="rounded-full" />
+          <div className="flex-1 max-w-[70%] mr-6">
+            <img
+              src="images/icon-online.svg"
+              className="rounded-full mx-auto lg:ml-0"
+            />
             <p className="font-bold text-3xl my-3">Online Banking</p>
             <p>
               Our modern web and mobile applications allow you to keep track of
               your finances wherever you are in the world.
             </p>
           </div>
-          <div className="flex-1">
-            <img src="images/icon-online.svg" className="rounded-full" />
+          <div className="flex-1 max-w-[70%]">
+            <img
+              src="images/icon-online.svg"
+              className="rounded-full mx-auto lg:ml-0"
+            />
             <p className="font-bold text-3xl my-3">Online Banking</p>
             <p>
               Our modern web and mobile applications allow you to keep track of

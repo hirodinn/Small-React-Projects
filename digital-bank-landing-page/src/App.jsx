@@ -15,7 +15,7 @@ function App() {
       </header>
       <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray lg:justify-center relative w-full h-[115vh] lg:h-[90vh] justify-start">
         <div className="px-7 lg:px-0 text-center lg:text-start lg:w-[50%] box-border">
-          <p className="text-7xl  lg:max-w-[80%]">
+          <p className="text-7xl  lg:max-w-[80%] text-my-blue">
             Next generation digital banking
           </p>
           <p className="lg:max-w-[70%] my-6 text-gray-500">
@@ -31,9 +31,9 @@ function App() {
         />
       </div>
       <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center lg:text-start">
-        <h1 className="text-6xl">Why choose Digitalbank?</h1>
-        <p className="my-10 max-w-[70%] lg:max-w-[45%] mx-auto lg:ml-0">
-          we leverage Open Banking to turn your bank account into your financial
+        <h1 className="text-6xl text-my-blue">Why choose Digitalbank?</h1>
+        <p className="my-10 max-w-[70%] lg:max-w-[45%] mx-auto lg:ml-0 text-[19px]">
+          We leverage Open Banking to turn your bank account into your financial
           hub, Control your finances like never before
         </p>
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-10">
@@ -42,7 +42,7 @@ function App() {
               src="images/icon-online.svg"
               className="rounded-full mx-auto lg:ml-0"
             />
-            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p className="text-my-blue text-3xl my-3">Online Banking</p>
             <p>
               Our modern web and mobile applications allow you to keep track of
               your finances wherever you are in the world.
@@ -53,10 +53,10 @@ function App() {
               src="images/icon-online.svg"
               className="rounded-full mx-auto lg:ml-0"
             />
-            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p className="text-my-blue text-3xl my-3">Simple Budgeting</p>
             <p>
-              Our modern web and mobile applications allow you to keep track of
-              your finances wherever you are in the world.
+              See exactly where your money goes each month. Receive
+              notifications when you’re close to hitting your limits.
             </p>
           </div>
           <div className="flex-1 max-w-[70%] mr-6">
@@ -64,10 +64,10 @@ function App() {
               src="images/icon-online.svg"
               className="rounded-full mx-auto lg:ml-0"
             />
-            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p className="text-my-blue text-3xl my-3">Fast Onboarding</p>
             <p>
-              Our modern web and mobile applications allow you to keep track of
-              your finances wherever you are in the world.
+              We don’t do branches. Open your account in minutes online and
+              start taking control of your finances right away.
             </p>
           </div>
           <div className="flex-1 max-w-[70%]">
@@ -75,10 +75,10 @@ function App() {
               src="images/icon-online.svg"
               className="rounded-full mx-auto lg:ml-0"
             />
-            <p className="font-bold text-3xl my-3">Online Banking</p>
+            <p className="text-my-blue text-3xl my-3">Open API</p>
             <p>
-              Our modern web and mobile applications allow you to keep track of
-              your finances wherever you are in the world.
+              Manage your savings, investments, pension, and much more from one
+              account. Tracking your money has never been easier.
             </p>
           </div>
         </div>

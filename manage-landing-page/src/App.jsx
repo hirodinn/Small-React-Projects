@@ -12,9 +12,29 @@ function App() {
     handleResize();
   }, []);
   useEffect(() => {
-    if (width < 800 && isClicked) setShowDropBox(true);
-    else setShowDropBox(false);
+    if (width < 800 && isClicked) {
+      setShowDropBox(true);
+      disableScroll();
+    } else {
+      setShowDropBox(false);
+      enableScroll();
+    }
+    return enableScroll;
   }, [width, isClicked]);
+  function disableScroll() {
+    window.addEventListener("scroll", preventScroll);
+    window.addEventListener("wheel", preventScroll, { passive: false });
+    window.addEventListener("touchmove", preventScroll, { passive: false });
+  }
+
+  function enableScroll() {
+    window.removeEventListener("scroll", preventScroll);
+    window.removeEventListener("wheel", preventScroll);
+    window.removeEventListener("touchmove", preventScroll);
+  }
+  function preventScroll(e) {
+    e.preventDefault();
+  }
   return (
     <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden relative">
       <img

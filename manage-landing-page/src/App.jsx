@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 function App() {
+  const [showDropBox, setShowDropBox] = useState(false);
   return (
     <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden relative">
       <img
@@ -27,6 +30,9 @@ function App() {
         <img
           src="images/icon-hamburger.svg"
           className="block md:hidden cursor-pointer"
+          onClick={() => {
+            setShowDropBox(true);
+          }}
         />
         <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover hidden md:block ">
           Get Started
@@ -259,6 +265,11 @@ function App() {
         src="images/bg-tablet-pattern.svg"
         className="absolute z-[-1] right-[-200px] max-w-[450px] top-[700px] lg:left-[-200px] box-border lg:top-[1200px] lg:max-w-[800px] "
       />
+      {showDropBox && (
+        <div className="absolute  bg-my-black left-0 right-0 top-0 h-screen box-border flex items-center justify-center">
+          <div className="w-3 h-32 bg-white"></div>
+        </div>
+      )}
     </div>
   );
 }

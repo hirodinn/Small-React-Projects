@@ -22,13 +22,21 @@ function App() {
       window.removeEventListener("scroll", preventScroll);
       window.removeEventListener("wheel", preventScroll);
       window.removeEventListener("touchmove", preventScroll);
+      window.removeEventListener("click", disableDrop);
     }
+    function disableDrop() {
+      setIsClicked(false);
+    }
+
     function preventScroll(e) {
       e.preventDefault();
     }
     if (width <= 768 && isClicked) {
       setShowDropBox(true);
       disableScroll();
+      setTimeout(() => {
+        window.addEventListener("click", disableDrop);
+      }, 10);
     } else {
       setShowDropBox(false);
       enableScroll();
@@ -64,7 +72,8 @@ function App() {
           src="images/icon-hamburger.svg"
           className="block md:hidden cursor-pointer"
           onClick={() => {
-            setIsClicked(!isClicked);
+            console.log("clicked");
+            setIsClicked(true);
           }}
         />
         <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover hidden md:block ">

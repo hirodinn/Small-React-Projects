@@ -32,7 +32,10 @@ function App() {
           Get Started
         </button>
       </header>
-      <div className="flex gap-[10%] flex-col-reverse lg:flex-row mt-30 w-[90%] max-w-[1370px] box-border mx-auto">
+      <div
+        className="flex gap-[10%] flex-col-reverse lg:flex-row mt-30 w-[90%] max-w-[1370px] box-border mx-auto"
+        id="pricing"
+      >
         <div className="flex-1 py-8 flex flex-col items-center lg:items-start text-center lg:text-start justify-around">
           <h1 className="text-7xl text-my-blue font-bold">
             Bring everyone together to build better products
@@ -49,7 +52,10 @@ function App() {
           <img src="public/images/illustration-intro.svg" className="h-fit" />
         </div>
       </div>
-      <div className="flex flex-col gap-5 lg:flex-row mt-30 w-[90%] max-w-[1370px] mx-auto box-border">
+      <div
+        className="flex flex-col gap-5 lg:flex-row mt-30 w-[90%] max-w-[1370px] mx-auto box-border"
+        id="product"
+      >
         <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-start mb-10 lg:mb-0">
           <h1 className="text-5xl text-my-blue font-bold max-w-[80%] mb-5">
             What's different about Manage?
@@ -107,7 +113,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center mt-30  box-border">
+      <div
+        className="flex flex-col items-center mt-30  box-border"
+        id="about-us"
+      >
         <h1 className="text-5xl text-my-blue font-bold mb-24">
           What they've said
         </h1>
@@ -159,7 +168,10 @@ function App() {
           Get Started
         </button>
       </div>
-      <div className="bg-my-orange flex flex-col lg:flex-row mt-30 justify-between  lg:px-40 p-10 box-border w-full items-center relative overflow-hidden">
+      <div
+        className="bg-my-orange flex flex-col lg:flex-row mt-30 justify-between  lg:px-40 p-10 box-border w-full items-center relative overflow-hidden"
+        id="careers"
+      >
         <h1 className="text-white text-5xl flex-1 lg:max-w-[40%] max-w-[70%] mb-12 lg:mb-0 text-center lg:text-start">
           Simplify how your team works today.
         </h1>
@@ -175,7 +187,10 @@ function App() {
           className="lg:hidden absolute left-0"
         />
       </div>
-      <footer className="bg-my-dark w-full lg:px-40 p-10 box-border flex lg:justify-between flex-col-reverse lg:flex-row">
+      <footer
+        className="bg-my-dark w-full lg:px-40 p-10 box-border flex lg:justify-between flex-col-reverse lg:flex-row"
+        id="community"
+      >
         <p className="text-gray-500 mt-20 lg:hidden text-center">
           Copy right 2025. All Right Reserved.
         </p>

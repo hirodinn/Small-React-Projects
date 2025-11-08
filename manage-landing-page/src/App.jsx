@@ -9,19 +9,19 @@ function App() {
         <img src="images/logo.svg" className="cursor-pointer" />
         <ul className="md:flex items-center justify-center hidden ml-8 lg:ml-8 sm:ml-6">
           <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
-            Pricing
+            <a href="#">Pricing</a>
           </li>
           <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
-            Product
+            <a href="#product">Product</a>
           </li>
           <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
-            About Us
+            <a href="#about-us">About Us</a>
           </li>
           <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
-            Careers
+            <a href="#careers">Careers</a>
           </li>
           <li className="lg:pr-8 pr-8 md:pr-6 cursor-pointer hover:text-gray-500">
-            Community
+            <a href="#community">Community</a>
           </li>
         </ul>
         <img

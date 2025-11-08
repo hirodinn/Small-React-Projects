@@ -1,7 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isClicked, setIsClicked] = useState(false);
   const [showDropBox, setShowDropBox] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  }, []);
+  useEffect(() => {
+    if (width < 800 && isClicked) setShowDropBox(true);
+    else setShowDropBox(false);
+  }, [width, isClicked]);
   return (
     <div className=" flex flex-col pt-6 h-fit font-['Outfit'] bg-[url(public/images/bg-simplify-section-desktop.svg)] bg-no-repeat fill-amber-300 box-border overflow-hidden relative">
       <img
@@ -31,7 +44,7 @@ function App() {
           src="images/icon-hamburger.svg"
           className="block md:hidden cursor-pointer"
           onClick={() => {
-            setShowDropBox(true);
+            setIsClicked(!isClicked);
           }}
         />
         <button className="rounded-[30px] cursor-pointer text-white bg-my-orange px-5 py-2.5 hover:bg-my-orange-hover hidden md:block ">
@@ -204,19 +217,19 @@ function App() {
           <img src="images/logo.svg" className="cursor-pointer w-70" />
           <ul className="flex w-full mt-5 justify-center lg:mt-20">
             <li className="cursor-pointer mx-3">
-              <i class="fab fa-facebook-f text-my-dark hover:bg-my-orange text-2xl bg-white p-1 pb-0"></i>
+              <i className="fab fa-facebook-f text-my-dark hover:bg-my-orange text-2xl bg-white p-1 pb-0"></i>
             </li>
             <li className="cursor-pointer mx-3">
-              <i class="fab fa-youtube text-white hover:text-my-orange text-3xl"></i>
+              <i className="fab fa-youtube text-white hover:text-my-orange text-3xl"></i>
             </li>
             <li className="cursor-pointer mx-3">
-              <i class="fab fa-twitter text-white hover:text-my-orange text-3xl"></i>
+              <i className="fab fa-twitter text-white hover:text-my-orange text-3xl"></i>
             </li>
             <li className="cursor-pointer mx-3">
-              <i class="fab fa-pinterest text-white hover:text-my-orange text-3xl "></i>
+              <i className="fab fa-pinterest text-white hover:text-my-orange text-3xl "></i>
             </li>
             <li className="cursor-pointer mx-3">
-              <i class="fab fa-instagram text-white hover:text-my-orange text-3xl "></i>
+              <i className="fab fa-instagram text-white hover:text-my-orange text-3xl "></i>
             </li>
           </ul>
         </div>

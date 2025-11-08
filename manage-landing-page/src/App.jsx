@@ -31,12 +31,14 @@ function App() {
     function preventScroll(e) {
       e.preventDefault();
     }
-    if (width <= 768 && isClicked) {
-      setShowDropBox(true);
-      disableScroll();
+    if (isClicked) {
       setTimeout(() => {
         window.addEventListener("click", disableDrop);
       }, 10);
+    }
+    if (width <= 768 && isClicked) {
+      setShowDropBox(true);
+      disableScroll();
     } else {
       setShowDropBox(false);
       enableScroll();

@@ -14,6 +14,7 @@
   --color-my-blue: #30284d;
   --color-my-blue-background: #31294e;
   --color-my-gray: #f3f5f7;
+  --color-my-black: rgba(0, 0, 0, 0.377);
 }
 @layer components {
   .request {

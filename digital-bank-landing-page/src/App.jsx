@@ -22,19 +22,9 @@ function App() {
       window.removeEventListener("scroll", preventScroll);
       window.removeEventListener("wheel", preventScroll);
       window.removeEventListener("touchmove", preventScroll);
-      window.removeEventListener("click", disableDrop);
     }
-    function disableDrop() {
-      setIsClicked(false);
-    }
-
     function preventScroll(e) {
       e.preventDefault();
-    }
-    if (isClicked) {
-      setTimeout(() => {
-        window.addEventListener("click", disableDrop);
-      }, 10);
     }
     if (width <= 768 && isClicked) {
       setShowDropBox(true);
@@ -50,9 +40,13 @@ function App() {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }, 10);
   }
+  function disableDrop() {
+    setIsClicked(false);
+    window.removeEventListener("click", disableDrop);
+  }
   return (
     <div className="w-full box-border bg-cyan-100 font-outfit">
-      <header className="w-full box-border mx-auto h-23 px-8 flex justify-between 2xl:px-40 xl:px-35 lg:px-25 bg-white py-8 items-center z-10 relative">
+      <header className="w-full box-border mx-auto h-23 px-8 flex justify-between 2xl:px-40 xl:px-35 lg:px-25 bg-white py-8 items-center z-2 relative">
         <img src="images/logo-dark.svg" className="cursor-pointer" />
         <ul className="text-[19px] hidden md:flex ml-4 lg:ml-6">
           <li className="text-gray-500 cursor-pointer mr-4 lg:mr-6">
@@ -77,6 +71,9 @@ function App() {
           className="md:hidden cursor-pointer"
           onClick={() => {
             setIsClicked(true);
+            setTimeout(() => {
+              window.addEventListener("click", disableDrop);
+            }, 50);
           }}
         />
       </header>
@@ -259,47 +256,47 @@ function App() {
         </div>
       </footer>
       {showDropBox && (
-        <div className="absolute bg-my-black left-0 right-0 top-0 h-screen box-border ">
+        <div className="absolute bg-my-black left-0 right-0 top-0 h-screen box-border z-3">
           <ul className=" bg-white px-7 absolute right-5 top-5">
             <li
               className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
               onClick={() => {
-                goto("pricing");
+                goto("");
               }}
             >
-              Pricing
+              Home
             </li>
             <li
               className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
               onClick={() => {
-                goto("product");
+                goto("about");
               }}
             >
-              Product
+              About
             </li>
             <li
               className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
               onClick={() => {
-                goto("about-us");
+                goto("contact");
               }}
             >
-              About Us
+              Contact
             </li>
             <li
               className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
+              onClick={() => {
+                goto("blog");
+              }}
+            >
+              Blog
+            </li>
+            <li
+              className="py-4 text-2xl cursor-pointer pl-7"
               onClick={() => {
                 goto("careers");
               }}
             >
               Careers
-            </li>
-            <li
-              className="py-4 text-2xl cursor-pointer pl-7"
-              onClick={() => {
-                goto("community");
-              }}
-            >
-              Community
             </li>
           </ul>
         </div>

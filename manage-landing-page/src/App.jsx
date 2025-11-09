@@ -104,7 +104,7 @@ function App() {
           </button>
         </div>
         <div className="flex-1 flex justify-center lg:justify-end">
-          <img src="public/images/illustration-intro.svg" className="h-fit" />
+          <img src="/images/illustration-intro.svg" className="h-fit" />
         </div>
       </div>
       <div
@@ -315,8 +315,8 @@ function App() {
         className="absolute z-[-1] right-[-200px] max-w-[450px] top-[700px] lg:left-[-200px] box-border lg:top-[1200px] lg:max-w-[800px] "
       />
       {showDropBox && (
-        <div className="absolute bg-my-black left-0 right-0 top-0 h-screen box-border flex items-center justify-center">
-          <ul className=" bg-white px-7">
+        <div className="absolute bg-my-black left-0 right-0 top-0 h-screen box-border ">
+          <ul className=" bg-white px-7 absolute right-5 top-5">
             <li
               className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
               onClick={() => {

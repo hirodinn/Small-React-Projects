@@ -10,6 +10,7 @@ function App() {
     };
     window.addEventListener("resize", handleResize);
     handleResize();
+    return () => window.removeEventListener("reside", handleResize);
   }, []);
   useEffect(() => {
     function disableScroll() {

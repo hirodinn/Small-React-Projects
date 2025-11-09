@@ -16,7 +16,7 @@ function App() {
           className="md:hidden cursor-pointer"
         />
       </header>
-      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:px-25 bg-my-light-gray md:justify-center relative w-full justify-start px-8 md:flex-row md:items-center pb-5 md:pb-0">
+      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray md:justify-center relative w-full justify-start px-8 md:flex-row md:items-center pb-5 md:pb-0">
         <div className="px-7 md:px-0 text-center md:text-start md:w-[50%] box-border">
           <p className="text-7xl  md:max-w-[80%] text-my-blue">
             Next generation digital banking
@@ -33,17 +33,17 @@ function App() {
           className="md:max-w-[50%] max-w-full md:relative md:top-30 md:mt-[-200px]"
         />
       </div>
-      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center lg:text-start px-10">
+      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center md:text-start px-10">
         <h1 className="text-6xl text-my-blue">Why choose Digitalbank?</h1>
-        <p className="my-10 max-w-[70%] lg:max-w-[45%] mx-auto lg:ml-0 text-[19px]">
+        <p className="my-10 max-w-[70%] md:max-w-[45%] mx-auto md:ml-0 text-[19px]">
           We leverage Open Banking to turn your bank account into your financial
           hub, Control your finances like never before
         </p>
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start space-y-10">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start space-y-10">
           <div className="max-w-[70%] flex-1 mr-6">
             <img
               src="images/icon-online.svg"
-              className="rounded-full mx-auto lg:ml-0"
+              className="rounded-full mx-auto md:ml-0"
             />
             <p className="text-my-blue text-3xl my-3">Online Banking</p>
             <p>
@@ -54,7 +54,7 @@ function App() {
           <div className="flex-1 max-w-[70%] mr-6">
             <img
               src="images/icon-online.svg"
-              className="rounded-full mx-auto lg:ml-0"
+              className="rounded-full mx-auto md:ml-0"
             />
             <p className="text-my-blue text-3xl my-3">Simple Budgeting</p>
             <p>
@@ -65,7 +65,7 @@ function App() {
           <div className="flex-1 max-w-[70%] mr-6">
             <img
               src="images/icon-online.svg"
-              className="rounded-full mx-auto lg:ml-0"
+              className="rounded-full mx-auto md:ml-0"
             />
             <p className="text-my-blue text-3xl my-3">Fast Onboarding</p>
             <p>
@@ -76,7 +76,7 @@ function App() {
           <div className="flex-1 max-w-[70%]">
             <img
               src="images/icon-online.svg"
-              className="rounded-full mx-auto lg:ml-0"
+              className="rounded-full mx-auto md:ml-0"
             />
             <p className="text-my-blue text-3xl my-3">Open API</p>
             <p>

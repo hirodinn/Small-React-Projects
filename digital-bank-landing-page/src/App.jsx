@@ -1,4 +1,55 @@
+import { useState, useEffect } from "react";
 function App() {
+  const [isClicked, setIsClicked] = useState(false);
+  const [showDropBox, setShowDropBox] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("reside", handleResize);
+  }, []);
+  useEffect(() => {
+    function disableScroll() {
+      window.addEventListener("scroll", preventScroll);
+      window.addEventListener("wheel", preventScroll, { passive: false });
+      window.addEventListener("touchmove", preventScroll, { passive: false });
+    }
+
+    function enableScroll() {
+      window.removeEventListener("scroll", preventScroll);
+      window.removeEventListener("wheel", preventScroll);
+      window.removeEventListener("touchmove", preventScroll);
+      window.removeEventListener("click", disableDrop);
+    }
+    function disableDrop() {
+      setIsClicked(false);
+    }
+
+    function preventScroll(e) {
+      e.preventDefault();
+    }
+    if (isClicked) {
+      setTimeout(() => {
+        window.addEventListener("click", disableDrop);
+      }, 10);
+    }
+    if (width <= 768 && isClicked) {
+      setShowDropBox(true);
+      disableScroll();
+    } else {
+      setShowDropBox(false);
+      enableScroll();
+    }
+    return enableScroll;
+  }, [width, isClicked]);
+  function goto(id) {
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }, 10);
+  }
   return (
     <div className="w-full box-border bg-cyan-100 font-outfit">
       <header className="w-full box-border mx-auto h-23 px-8 flex justify-between 2xl:px-40 xl:px-35 lg:px-25 bg-white py-8 items-center z-10 relative">
@@ -24,6 +75,9 @@ function App() {
         <img
           src="images/icon-hamburger.svg"
           className="md:hidden cursor-pointer"
+          onClick={() => {
+            setIsClicked(true);
+          }}
         />
       </header>
       <div
@@ -204,6 +258,52 @@ function App() {
           <p className="text-gray-500">@Digitalbank. All Rights Reserved</p>
         </div>
       </footer>
+      {showDropBox && (
+        <div className="absolute bg-my-black left-0 right-0 top-0 h-screen box-border ">
+          <ul className=" bg-white px-7 absolute right-5 top-5">
+            <li
+              className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
+              onClick={() => {
+                goto("pricing");
+              }}
+            >
+              Pricing
+            </li>
+            <li
+              className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
+              onClick={() => {
+                goto("product");
+              }}
+            >
+              Product
+            </li>
+            <li
+              className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
+              onClick={() => {
+                goto("about-us");
+              }}
+            >
+              About Us
+            </li>
+            <li
+              className="py-4 text-2xl cursor-pointer border-b-2 pl-7"
+              onClick={() => {
+                goto("careers");
+              }}
+            >
+              Careers
+            </li>
+            <li
+              className="py-4 text-2xl cursor-pointer pl-7"
+              onClick={() => {
+                goto("community");
+              }}
+            >
+              Community
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

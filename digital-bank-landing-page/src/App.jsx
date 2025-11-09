@@ -33,7 +33,7 @@ function App() {
           className="md:max-w-[50%] max-w-full md:relative md:top-30 md:mt-[-200px]"
         />
       </div>
-      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center md:text-start px-10">
+      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center md:text-start px-8">
         <h1 className="text-6xl text-my-blue">Why choose Digitalbank?</h1>
         <p className="my-10 max-w-[70%] md:max-w-[45%] mx-auto md:ml-0 text-[19px]">
           We leverage Open Banking to turn your bank account into your financial
@@ -86,8 +86,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15 px-10">
-        <h1 className="lg:mb-25 mb-15 text-6xl text-my-blue text-center lg:text-start">
+      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15 px-8">
+        <h1 className="md:mb-25 mb-15 text-6xl text-my-blue text-center md:text-start">
           Latest Articles
         </h1>
         <div className="flex gap-4 text-gray-500 flex-wrap justify-evenly">
@@ -158,8 +158,8 @@ function App() {
           </div>
         </div>
       </div>
-      <footer className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-10 flex flex-col lg:flex-row lg:h-[170px] text-white">
-        <div className="lg:h-100% flex flex-col justify-around mx-auto lg:ml-0">
+      <footer className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-8 flex flex-col md:flex-row md:h-[170px] text-white">
+        <div className="md:h-100% flex flex-col justify-around mx-auto md:ml-0">
           <img src="images/logo-light.svg" className="cursor-pointer" />
           <div className="flex justify-between my-8">
             <img src="images/icon-facebook.svg" className="cursor-pointer" />
@@ -169,7 +169,7 @@ function App() {
             <img src="images/icon-instagram.svg" className="cursor-pointer" />
           </div>
         </div>
-        <div className="flex flex-col flex-wrap text-[18px] h-full flex-1 mb-8 lg:mb-0">
+        <div className="flex flex-col flex-wrap text-[18px] h-full flex-1 mb-8 md:mb-0">
           <p className="mx-auto mb-2 cursor-pointer">About</p>
           <p className="mx-auto mb-2 cursor-pointer">Contact</p>
           <p className="mx-auto mb-2 cursor-pointer">Blog</p>

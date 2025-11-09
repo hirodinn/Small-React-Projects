@@ -1,24 +1,27 @@
 function App() {
   return (
     <div className="w-full box-border bg-cyan-100 font-outfit">
-      <header className="w-full box-border mx-auto h-23 px-10 flex justify-between 2xl:px-40 xl:px-35 lg:px-25  bg-white py-8 items-center z-10 relative">
+      <header className="w-full box-border mx-auto h-23 px-8 flex justify-between 2xl:px-40 xl:px-35 lg:px-25 bg-white py-8 items-center z-10 relative">
         <img src="images/logo-dark.svg" className="cursor-pointer" />
-        <ul className="text-[19px] hidden lg:flex">
+        <ul className="text-[19px] hidden md:flex">
           <li className="text-gray-500 cursor-pointer mr-6">Home</li>
           <li className="text-gray-500 cursor-pointer mr-6">About</li>
           <li className="text-gray-500 cursor-pointer mr-6">Contact</li>
           <li className="text-gray-500 cursor-pointer mr-6">Blog</li>
           <li className="text-gray-500 cursor-pointer mr-6">Careers</li>
         </ul>
-        <button className="hidden lg:block request">Request invite</button>
-        <img src="images/icon-hamburger.svg" className="lg:hidden" />
+        <button className="hidden md:block request">Request invite</button>
+        <img
+          src="images/icon-hamburger.svg"
+          className="md:hidden cursor-pointer"
+        />
       </header>
-      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray lg:justify-center relative w-full h-[115vh] lg:h-[90vh] justify-start px-10">
-        <div className="px-7 lg:px-0 text-center lg:text-start lg:w-[50%] box-border">
-          <p className="text-7xl  lg:max-w-[80%] text-my-blue">
+      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:px-25 bg-my-light-gray md:justify-center relative w-full justify-start px-8 md:flex-row md:items-center pb-5 md:pb-0">
+        <div className="px-7 md:px-0 text-center md:text-start md:w-[50%] box-border">
+          <p className="text-7xl  md:max-w-[80%] text-my-blue">
             Next generation digital banking
           </p>
-          <p className="lg:max-w-[70%] my-6 text-gray-500">
+          <p className="md:max-w-[70%] my-6 text-gray-500">
             Take your financial life online. Your Digitalbank account will be a
             one-stop-shop for spending, saving, budgeting, investing, and much
             more.
@@ -27,7 +30,7 @@ function App() {
         </div>
         <img
           src="images/image-mockups.png"
-          className="absolute max-w-[600px] right-[50%] translate-x-[50%] lg:translate-x-0 lg:right-0  top-[-100px] lg:max-w-[50%] lg:bg-[url(images/bg-intro-desktop.svg)] bg-[url(images/bg-intro-mobile.svg)] bg-no-repeat bg-size-[100%]"
+          className="md:max-w-[50%] max-w-full md:relative md:top-30 md:mt-[-200px]"
         />
       </div>
       <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center lg:text-start px-10">

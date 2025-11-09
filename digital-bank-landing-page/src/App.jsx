@@ -3,12 +3,22 @@ function App() {
     <div className="w-full box-border bg-cyan-100 font-outfit">
       <header className="w-full box-border mx-auto h-23 px-8 flex justify-between 2xl:px-40 xl:px-35 lg:px-25 bg-white py-8 items-center z-10 relative">
         <img src="images/logo-dark.svg" className="cursor-pointer" />
-        <ul className="text-[19px] hidden md:flex">
-          <li className="text-gray-500 cursor-pointer mr-6">Home</li>
-          <li className="text-gray-500 cursor-pointer mr-6">About</li>
-          <li className="text-gray-500 cursor-pointer mr-6">Contact</li>
-          <li className="text-gray-500 cursor-pointer mr-6">Blog</li>
-          <li className="text-gray-500 cursor-pointer mr-6">Careers</li>
+        <ul className="text-[19px] hidden md:flex ml-4 lg:ml-6">
+          <li className="text-gray-500 cursor-pointer mr-4 lg:mr-6">
+            <a href="#">Home</a>
+          </li>
+          <li className="text-gray-500 cursor-pointer mr-4 lg:mr-6">
+            <a href="#about">About</a>
+          </li>
+          <li className="text-gray-500 cursor-pointer mr-4 lg:mr-6">
+            <a href="#contact">Contact</a>
+          </li>
+          <li className="text-gray-500 cursor-pointer mr-4 lg:mr-6">
+            <a href="#blog">Blog</a>
+          </li>
+          <li className="text-gray-500 cursor-pointer mr-4 lg:mr-6">
+            <a href="#careers">Careers</a>
+          </li>
         </ul>
         <button className="hidden md:block request">Request invite</button>
         <img
@@ -16,7 +26,10 @@ function App() {
           className="md:hidden cursor-pointer"
         />
       </header>
-      <div className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray md:justify-center relative w-full justify-start px-8 md:flex-row md:items-center pb-5 md:pb-0">
+      <div
+        className="flex flex-col-reverse 2xl:pl-40 xl:pl-35 lg:pl-25 bg-my-light-gray md:justify-center relative w-full justify-start px-8 md:flex-row md:items-center pb-5 md:pb-0"
+        id="about"
+      >
         <div className="px-7 md:px-0 text-center md:text-start md:w-[50%] box-border">
           <p className="text-7xl  md:max-w-[80%] text-my-blue">
             Next generation digital banking
@@ -33,7 +46,10 @@ function App() {
           className="md:max-w-[50%] max-w-full md:relative md:top-30 md:mt-[-200px]"
         />
       </div>
-      <div className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center md:text-start px-8">
+      <div
+        className="bg-my-gray 2xl:px-40 xl:px-35 lg:px-25  text-gray-600 py-30 text-center md:text-start px-8"
+        id="contact"
+      >
         <h1 className="text-6xl text-my-blue">Why choose Digitalbank?</h1>
         <p className="my-10 max-w-[70%] md:max-w-[45%] mx-auto md:ml-0 text-[19px]">
           We leverage Open Banking to turn your bank account into your financial
@@ -86,7 +102,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15 px-8">
+      <div
+        className="bg-my-light-gray 2xl:px-40 xl:px-35 lg:px-25 lg:py-25 py-15 px-8"
+        id="blog"
+      >
         <h1 className="md:mb-25 mb-15 text-6xl text-my-blue text-center md:text-start">
           Latest Articles
         </h1>
@@ -158,7 +177,10 @@ function App() {
           </div>
         </div>
       </div>
-      <footer className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-8 flex flex-col md:flex-row md:h-[170px] text-white">
+      <footer
+        className="bg-my-blue-background 2xl:px-40 xl:px-35 lg:px-25 py-7 px-8 flex flex-col md:flex-row md:h-[170px] text-white"
+        id="careers"
+      >
         <div className="md:h-100% flex flex-col justify-around mx-auto md:ml-0">
           <img src="images/logo-light.svg" className="cursor-pointer" />
           <div className="flex justify-between my-8">

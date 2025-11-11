@@ -30,12 +30,12 @@ function App() {
           iOS apps will help you organize everything.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row box-border border-2 h-fit mb-12 max-w-full">
+      <div className="flex flex-col md:flex-row box-border border-2 h-fit mb-12 max-w-full text-center md:text-start">
         <img
           src="images/image-computer.png"
-          className="relative right-20 w-1/2 h-fit self-center"
+          className="relative md:right-20 md:w-1/2 h-fit self-center w-[80%]"
         />
-        <div className="flex flex-col box-border ml-[5vw] max-w-[500px] border-2 min-h-full justify-around">
+        <div className="flex flex-col box-border self-center md:max-w-[500px] border-2 justify-around max-w-[80%] gap-3 md:self-stretch mt-9 md:mt-0 ">
           <div className="w-full">
             <h1 className="text-my-dark-gray text-4xl font-bold">
               Quick Search

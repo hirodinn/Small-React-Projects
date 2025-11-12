@@ -82,7 +82,7 @@ function App() {
           We've got the tools to boost your productivity.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 w-[90%] max-w-[1200px] mx-auto mb-100">
+      <div className="flex flex-col md:flex-row gap-5 w-[90%] max-w-[1200px] mx-auto mb-30">
         <div className="flex-1 flex flex-col items-center gap-3">
           <img src="images/icon-blacklist.svg" className="h-14" />
           <h1 className="text-my-dark-gray text-center text-3xl font-bold mt-5">
@@ -110,6 +110,23 @@ function App() {
           <p className="text-my-light-gray text-[18px] leading-9 text-center">
             Quick preview of all snippets on your Clipboard for easy access.
           </p>
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row gap-[100px] md:gap-[6%] lg:gap-[10%] w-[60%] md:w-[97%] max-w-[1200px] mx-auto mb-30 box-border">
+        <div className="flex-1">
+          <img src="images/logo-google.png" className="w-full" />
+        </div>
+        <div className="flex-1">
+          <img src="images/logo-ibm.png" className="w-full" />
+        </div>
+        <div className="flex-1">
+          <img src="images/logo-microsoft.png" className="w-full" />
+        </div>
+        <div className="flex-1">
+          <img src="images/logo-hp.png" className="w-full" />
+        </div>
+        <div className="flex-1">
+          <img src="images/logo-vector-graphics.png" className="w-full" />
         </div>
       </div>
     </div>

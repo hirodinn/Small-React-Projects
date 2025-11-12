@@ -129,6 +129,15 @@ function App() {
           <img src="images/logo-vector-graphics.png" className="w-full" />
         </div>
       </div>
+      <div className="w-[80%] max-w-[750px] mx-auto mt-[-70px] md:mt-0 mb-10 box-border">
+        <h1 className="text-my-dark-gray text-center text-5xl font-bold">
+          Clipboard for iOS and Mac OS
+        </h1>
+        <p className="text-my-light-gray text-[20px] text-center leading-8 mt-5">
+          Available for free on the App store Download for Mac or iOS, sync with
+          iCloud and you're ready to start adding to your clipboard
+        </p>
+      </div>
     </div>
   );
 }

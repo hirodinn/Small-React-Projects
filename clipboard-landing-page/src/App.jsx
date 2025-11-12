@@ -64,7 +64,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] max-w-[750px] mx-auto mb-20">
+      <div className="w-[80%] max-w-[750px] mx-auto mb-15">
         <h1 className="text-5xl text-my-dark-gray text-center font-bold">
           Access Clipboard anywhere
         </h1>
@@ -73,7 +73,15 @@ function App() {
           Clipboard snippets in the few simple clicks
         </p>
       </div>
-      <img src="images/image-devices.png" className="mx-auto" />
+      <img src="images/image-devices.png" className="mx-auto mb-10" />
+      <div className="w-[80%] max-w-[750px] mx-auto mb-15">
+        <h1 className="text-5xl text-my-dark-gray text-center font-bold">
+          Supercharge your workflow
+        </h1>
+        <p className="text-my-light-gray text-[20px] text-center mt-5">
+          We've got the tools to boost your productivity.
+        </p>
+      </div>
     </div>
   );
 }

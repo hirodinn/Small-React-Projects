@@ -140,17 +140,17 @@ function App() {
       </div>
       <footer className="bg-footer-bg flex flex-col md:flex-row md:max-h-[200px] p-5 box-border  items-center gap-10">
         <img src="images/logo.svg" className="flex-1" />
-        <div className="flex flex-col flex-wrap py-7 text-[20px] flex-7 box-border border-2 gap-12 md:max-h-[200px]">
+        <div className="flex flex-col items-center w-full flex-wrap py-7 text-[20px] flex-7 box-border border-2 gap-12 md:max-h-[200px]">
           <p>FAQs</p>
           <p>Contact Us</p>
           <p>Privacy Policy</p>
           <p>Press Kit</p>
           <p>Install guide</p>
         </div>
-        <div className="flex flex-row flex-1 justify-around">
-          <img src="images/icon-facebook.svg" className="w-12" />
-          <img src="images/icon-twitter.svg" className="w-12" />
-          <img src="images/icon-instagram.svg" className="w-12" />
+        <div className="flex flex-row w-full flex-1 justify-between">
+          <img src="images/icon-facebook.svg" className="w-1/4" />
+          <img src="images/icon-twitter.svg" className="w-1/4" />
+          <img src="images/icon-instagram.svg" className="w-1/4" />
         </div>
       </footer>
     </div>

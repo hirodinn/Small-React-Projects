@@ -129,7 +129,7 @@ function App() {
           <img src="images/logo-vector-graphics.png" className="w-full" />
         </div>
       </div>
-      <div className="w-[80%] max-w-[750px] mx-auto mt-[-70px] md:mt-0 mb-10 box-border">
+      <div className="w-[80%] max-w-[750px] mx-auto mt-[-70px] md:mt-0 mb-15 box-border">
         <h1 className="text-my-dark-gray text-center text-5xl font-bold">
           Clipboard for iOS and Mac OS
         </h1>
@@ -138,6 +138,21 @@ function App() {
           iCloud and you're ready to start adding to your clipboard
         </p>
       </div>
+      <footer className="bg-footer-bg flex flex-col md:flex-row md:max-h-[200px] p-5 box-border  items-center gap-10">
+        <img src="images/logo.svg" className="flex-1" />
+        <div className="flex flex-col flex-wrap py-7 text-[20px] flex-7 box-border border-2 gap-12 md:max-h-[200px]">
+          <p>FAQs</p>
+          <p>Contact Us</p>
+          <p>Privacy Policy</p>
+          <p>Press Kit</p>
+          <p>Install guide</p>
+        </div>
+        <div className="flex flex-row flex-1 justify-around">
+          <img src="images/icon-facebook.svg" className="w-12" />
+          <img src="images/icon-twitter.svg" className="w-12" />
+          <img src="images/icon-instagram.svg" className="w-12" />
+        </div>
+      </footer>
     </div>
   );
 }

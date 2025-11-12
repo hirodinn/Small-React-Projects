@@ -82,35 +82,33 @@ function App() {
           We've got the tools to boost your productivity.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 w-[90%] max-w-[1200px] border-2 mx-auto mb-100">
+      <div className="flex flex-col md:flex-row gap-5 w-[90%] max-w-[1200px] mx-auto mb-100">
         <div className="flex-1 flex flex-col items-center gap-3">
-          <img src="images/icon-blacklist.svg" />
+          <img src="images/icon-blacklist.svg" className="h-14" />
           <h1 className="text-my-dark-gray text-center text-3xl font-bold mt-5">
             Create Blacklists
           </h1>
-          <p className="text-my-light-gray text-[20px] text-center">
+          <p className="text-my-light-gray text-[18px] leading-9 text-center">
             Ensure Sensitive information never makes its way to your clipboard
             by excluding certain sources
           </p>
         </div>
         <div className="flex-1 flex flex-col items-center gap-3">
-          <img src="images/icon-blacklist.svg" />
+          <img src="images/icon-text.svg" className="h-14" />
           <h1 className="text-my-dark-gray text-center text-3xl font-bold mt-5">
-            Create Blacklists
+            Plain text snippets
           </h1>
-          <p className="text-my-light-gray text-[20px] text-center">
-            Ensure Sensitive information never makes its way to your clipboard
-            by excluding certain sources
+          <p className="text-my-light-gray text-[18px] leading-9 text-center">
+            Remove unwanted formatting from copied text for a consistent look.
           </p>
         </div>
         <div className="flex-1 flex flex-col items-center gap-3">
-          <img src="images/icon-blacklist.svg" />
+          <img src="images/icon-preview.svg" className="h-14" />
           <h1 className="text-my-dark-gray text-center text-3xl font-bold mt-5">
-            Create Blacklists
+            Sneak preview
           </h1>
-          <p className="text-my-light-gray text-[20px] text-center">
-            Ensure Sensitive information never makes its way to your clipboard
-            by excluding certain sources
+          <p className="text-my-light-gray text-[18px] leading-9 text-center">
+            Quick preview of all snippets on your Clipboard for easy access.
           </p>
         </div>
       </div>

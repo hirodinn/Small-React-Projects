@@ -137,10 +137,18 @@ function App() {
           Available for free on the App store Download for Mac or iOS, sync with
           iCloud and you're ready to start adding to your clipboard
         </p>
+        <div className="flex flex-col md:flex-row justify-center text-[20px] mt-8 gap-3 mb-14">
+          <button className="text-white bg-my-green rounded-4xl py-3 px-6 cursor-pointer shadow-[0_4px_5px_rgba(0,0,0,0.5)] font-outfit w-full md:w-fit">
+            Download for iOS
+          </button>
+          <button className="text-white bg-my-violet rounded-4xl py-3 px-6 cursor-pointer shadow-[0_4px_5px_rgba(0,0,0,0.5)] font-outfit w-full md:w-fit">
+            Download for mac
+          </button>
+        </div>
       </div>
       <footer className="bg-footer-bg flex flex-col md:flex-row md:max-h-[200px] p-5 box-border  items-center gap-10">
         <img src="images/logo.svg" className="flex-1" />
-        <div className="flex flex-col items-center w-full flex-wrap py-7 text-[20px] flex-7 box-border border-2 gap-12 md:max-h-[200px]">
+        <div className="flex flex-col items-center w-full flex-wrap py-7 text-[20px] flex-7 box-border gap-12 md:max-h-[200px]">
           <p>FAQs</p>
           <p>Contact Us</p>
           <p>Privacy Policy</p>

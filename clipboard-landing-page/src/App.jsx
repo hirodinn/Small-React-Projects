@@ -30,7 +30,7 @@ function App() {
           iOS apps will help you organize everything.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row box-border h-fit mb-12 max-w-full text-center md:text-start">
+      <div className="flex flex-col md:flex-row box-border h-fit mb-20 max-w-full text-center md:text-start">
         <img
           src="images/image-computer.png"
           className="relative md:right-20 md:w-1/2 h-fit self-center w-[80%]"
@@ -63,6 +63,15 @@ function App() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="w-[80%] max-w-[750px] mx-auto mb-20">
+        <h1 className="text-5xl text-my-dark-gray text-center">
+          Access Clipboard anywhere
+        </h1>
+        <p className="text-my-light-gray text-[20px] text-center mt-5">
+          Whether you are on the go, or at your computer, you can access your
+          Clipboard snippets in the few simple clicks
+        </p>
       </div>
     </div>
   );
